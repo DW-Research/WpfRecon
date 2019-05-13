@@ -171,7 +171,7 @@ namespace WpfRecon.Scans
             }
 
 
-            //async callback for tcp clients hello 
+            //async callback for tcp clients
             void AsyncCallback(IAsyncResult asyncResult)
             {
                 var state = (isTcpPortOpen)asyncResult.AsyncState;

@@ -41,7 +41,7 @@ namespace WpfRecon
 
         private void Scan_Click(object sender, RoutedEventArgs e)
         {
-           //this is what will run the Live scan 
+           
            
         }
 

@@ -102,10 +102,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="LockScreenLogo.scale-200.png" />
+    <Resource Include="white rabbit.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="white rabbit.png" />
+    <Resource Include="Biohazard-PNG-Download-Image.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,20 +11,23 @@ namespace WpfRecon.Scans
 {
     public class LiveHost
     {
-        private void Scan_Click(object sender, EventArgs e)
+        public string PingSweep(string IPaddress)
         {
-            var mp = new MainWindow();
+            var successText = "Unsuccessful :(";
+            //var mp = new MainWindow();
             Ping p = new Ping();
             PingReply r;
             string s;
-            s = mp.IpAddress.Text;
-            r = p.Send(s);
+            s = IPaddress;
+            r = p.Send(IPaddress);
 
             if (r.Status == IPStatus.Success)
-            {
-                mp.firsttest.Text = "Ping to " + s.ToString() + "[" + r.Address.ToString() + "]" + " Successful"
+            { 
+                successText = "Ping to " + s.ToString() + "[" + r.Address.ToString() + "]" + " Successful"
                    + " Response delay = " + r.RoundtripTime.ToString() + " ms" + "\n";
+                return successText;
             }
+            return successText;
         }
 
         private void IpAddress_Validated(object sender, EventArgs e)

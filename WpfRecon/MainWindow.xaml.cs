@@ -26,7 +26,7 @@ namespace WpfRecon
             InitializeComponent();
             this.InitializeComponent();
 
-            var FirstTestText = firsttest.Text;
+            var FirstTestText = Output.Text;
         }
         
         public TextBox MyTextBox
@@ -36,13 +36,15 @@ namespace WpfRecon
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            firsttest.Text = IpAddress.Text;
+            
         }
 
         private void Scan_Click(object sender, RoutedEventArgs e)
         {
-           
-           
+            LiveHost lh = new LiveHost();
+            
+            Output.Text = lh.PingSweep(IpAddress.Text);
+            
         }
 
         private void Firsttest_SelectionChanged(object sender, RoutedEventArgs e)

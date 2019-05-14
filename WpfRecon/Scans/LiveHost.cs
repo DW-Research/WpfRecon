@@ -11,9 +11,11 @@ namespace WpfRecon.Scans
 {
     public class LiveHost
     {
+
+        //TO-DO add error codes, This is not a live host, this is not a correct IP.
         public string PingSweep(string IPaddress)
         {
-            var successText = "Unsuccessful :(";
+            var successText = "This is not a live host";
             //var mp = new MainWindow();
             Ping p = new Ping();
             PingReply r;
@@ -23,7 +25,7 @@ namespace WpfRecon.Scans
 
             if (r.Status == IPStatus.Success)
             { 
-                successText = "Ping to " + s.ToString() + "[" + r.Address.ToString() + "]" + " Successful"
+                successText = "Ping to " + s.ToString() + " Successful"
                    + " Response delay = " + r.RoundtripTime.ToString() + " ms" + "\n";
                 return successText;
             }

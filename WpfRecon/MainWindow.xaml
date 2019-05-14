@@ -7,31 +7,31 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="1080">
     <Grid>
-        <Grid  Background="#FF292626"   >
+        <Grid  Background="#FF292626" Margin="0,10,0.333,-10.333"   >
             <Grid.RowDefinitions>
                 <RowDefinition Height="166*"/>
                 <RowDefinition Height="147*"/>
-                <RowDefinition Height="194*"/>
-                <RowDefinition Height="15*"/>
-                <RowDefinition Height="104*"/>
+                <RowDefinition Height="277*"/>
+                <RowDefinition Height="0*"/>
+                <RowDefinition Height="36*"/>
                 <RowDefinition Height="144*"/>
             </Grid.RowDefinitions>
-            <TextBlock x:Name="InfoPanel" HorizontalAlignment="Center" Height="180" TextWrapping="WrapWithOverflow" VerticalAlignment="Bottom" Width="641.667" FontSize="21" Foreground="#FFF7EFEF" Text="This is Recon, a network scanner to see what devices are connected &quot;your&quot;  network.   To use this tool, add your IP Address in the textbox above and await the results, Simple.  This tool is not to be used for any illiegal activities and the user takes full responcibilities for thier own actions." Margin="235.167,0,196.499,100.486" Grid.Row="2" Grid.RowSpan="3" />
-            <ProgressBar Height="19" Margin="235,10.333,234.333,0" VerticalAlignment="Top" BorderBrush="#6637FF0A" Background="#FF06B025"  ValueChanged="ProgressBar_ValueChanged" Grid.Row="4"/>
-            <TextBlock  Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="15.96" Margin="512.022,0,512.021,0"/>
-            <TextBlock x:Name="Output" Height="140" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" Foreground="#FF4BC114"  x:FieldModifier="public" Margin="197,74.333,178.333,0" Background="White" Grid.Row="4" Grid.RowSpan="2"/>
-            <TextBox x:Name="IpAddress" HorizontalAlignment="Center" VerticalAlignment="Center" Height="24" Width="442" BorderBrush="#FF06B025"  TextChanged="TextBox_TextChanged" Margin="298,113,333.333,10.333" x:FieldModifier="public" Background="#FF9D9999" MaxLength="15" MaxLines="1" ToolTip="IP Address" Grid.Row="1"/>
-            <Button x:Name="Scan" HorizontalAlignment="Center" Height="58" VerticalAlignment="Center" Width="59"  BorderThickness="0,0,0,0"   Click="Scan_Click"  Margin="780,89,234.333,0.333" Content="Scan" Grid.Row="1">
+            <TextBlock x:Name="InfoPanel" HorizontalAlignment="Center" Height="273" TextWrapping="WrapWithOverflow" VerticalAlignment="Bottom" Width="642" FontSize="21" Foreground="#FFF7EFEF" Margin="235,0,196.333,0.667" Grid.Row="2" ><Run Text="This is Recon, a network scanner to see what devices are connected &quot;your&quot;  network. "/><Run Text=" As this is the free open source version you are limited to one IP Address at a time"/><LineBreak/><Run/><LineBreak/><Run Text=" "/><Run Text="T"/><Run Text="o use this tool, add your IP Address in the textbox above and await the results, Simple.  This tool is not to be used for any illiegal activities and the user takes full responsibilities for their own actions."/></TextBlock>
+            <ProgressBar Height="16" Margin="235,10.333,196,0" VerticalAlignment="Top" BorderBrush="#6637FF0A" Background="#FF06B025"  ValueChanged="ProgressBar_ValueChanged" Grid.Row="4"/>
+            <TextBlock  Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Margin="512,0,512.333,0"/>
+            <TextBlock x:Name="Output" Height="140" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" Foreground="#FF4BC114"  x:FieldModifier="public" Margin="199,3.333,175.333,0" Background="#FF292626" Grid.Row="5"/>
+            <TextBox x:Name="IpAddress" HorizontalAlignment="Center" VerticalAlignment="Center" Height="24" Width="262" BorderBrush="#FF06B025"  TextChanged="TextBox_TextChanged" Margin="391,96,420,27.333" x:FieldModifier="public" Background="#FF9D9999" MaxLength="18" MaxLines="1" ToolTip="IP Address" Grid.Row="1"/>
+            <Button x:Name="Scan" HorizontalAlignment="Center" Height="58" VerticalAlignment="Center" Width="59"  BorderThickness="0,0,0,0"   Click="Scan_Click"  Margin="680,62,334,27.333" Content="Scan" Grid.Row="1" RenderTransformOrigin="0.441,0.253">
                 <Button.Background>
                     <ImageBrush ImageSource="Biohazard-PNG-Download-Image.png"/>
                 </Button.Background>
             </Button>
-            <Image  Height="200" Margin="453,38,420.333,0"  VerticalAlignment="Top" Width="200" Source="white rabbit.png" Grid.RowSpan="2">
+            <Image  Height="200" Margin="453,38,420.333,0"  VerticalAlignment="Top" Source="white rabbit.png" Grid.RowSpan="2">
                 <Image.OpacityMask>
                     <ImageBrush ImageSource="white rabbit.png" Stretch="Uniform"/>
                 </Image.OpacityMask>
             </Image>
-            <Menu HorizontalAlignment="Left" Height="450.398" VerticalAlignment="Top" Width="150.667" Background="#FF292626" >
+            <Menu HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="151" Background="#FF292626" Grid.RowSpan="5" Margin="0,53,0,0" Grid.Row="1" >
                 <MenuItem x:Name="Results" Header="Results" Height="72" Width="140.667" Foreground="#FFF7EFEF" FontSize="18"/>
                 <MenuItem x:Name="About" Header="About" Height="72" Width="140.667" Foreground="#FFF7EFEF" FontSize="18"/>
             </Menu>

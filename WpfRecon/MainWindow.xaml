@@ -31,9 +31,10 @@
                     <ImageBrush ImageSource="white rabbit.png" Stretch="Uniform"/>
                 </Image.OpacityMask>
             </Image>
-            <Menu HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="151" Background="#FF292626" Grid.RowSpan="5" Margin="0,53,0,0" Grid.Row="1" >
-                <MenuItem x:Name="Results" Header="Results" Height="72" Width="140.667" Foreground="#FFF7EFEF" FontSize="18"/>
-                <MenuItem x:Name="About" Header="About" Height="72" Width="140.667" Foreground="#FFF7EFEF" FontSize="18"/>
+            <Menu HorizontalAlignment="Left" Height="407" VerticalAlignment="Top" Width="151" Background="#FF292626" Grid.RowSpan="5" Margin="0,96,0,0" Grid.Row="1" >
+                <MenuItem x:Name="Home" Header="Home" Height="72" Width="140.667" Foreground="#FFF7EFEF" FontSize="18"/>
+                <MenuItem x:Name="Results" Header="Results" Height="72" Width="141" Foreground="#FFF7EFEF" FontSize="18"/>
+                <MenuItem x:Name="About" Header="About" Height="72" Width="141" Foreground="#FFF7EFEF" FontSize="18"/>
             </Menu>
         </Grid>
 

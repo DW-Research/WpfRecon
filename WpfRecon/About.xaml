@@ -1,0 +1,35 @@
+﻿<Page x:Class="WpfRecon.AboutPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfRecon"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1080"
+      Title="About">
+  
+        <Grid  Background="#FF292626" Margin="0,10,0.333,-10.333"   >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="166*"/>
+            <RowDefinition Height="147*"/>
+            <RowDefinition Height="277*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="144*"/>
+        </Grid.RowDefinitions>
+                <Image  Height="200" Margin="453,38,420.333,0"  VerticalAlignment="Top" Source="/Assets/white rabbit.png" Grid.RowSpan="2">
+                <Image.OpacityMask>
+                <ImageBrush ImageSource="/Assets/white rabbit.png" Stretch="Uniform"/>
+        </Image.OpacityMask>
+    </Image>
+
+    <Menu HorizontalAlignment="Left" Height="407" VerticalAlignment="Top" Width="151" Background="#FF292626" Grid.RowSpan="5" Margin="0,96,0,0" Grid.Row="1" >
+        <MenuItem x:Name="Home" Header="Home" Height="72" Width="140.667" Foreground="#FFF7EFEF" FontSize="18" Click="Home_Click"/>
+        <MenuItem x:Name="Results" Header="Results" Height="72" Width="141" Foreground="#FFF7EFEF" FontSize="18"/>
+        <MenuItem x:Name="About" Header="About" Height="72" Width="141" Foreground="#FFF7EFEF" FontSize="18" Click="About_Click"/>
+    </Menu>
+        <TextBlock x:Name="AboutInfoPanel" HorizontalAlignment="Center" Height="273" TextWrapping="WrapWithOverflow" VerticalAlignment="Bottom" Width="642" FontSize="21" Foreground="#FFF7EFEF" Margin="235,0,196.333,0.667" Grid.Row="2" ><Run Text="This is Recon, Recon has been created as part of my MSc in Applied Computer Science under the project of FDM90 for Brighton Universtity."/><LineBreak/><Run/><LineBreak/><Run Text="Please note the discliamer following my ethics and good standards, This tool is not to be used for any illiegal activities and the user takes full responsibilities for their own actions.  "/><LineBreak/><Run/><LineBreak/><Run Text="Author Patrick Wake"/></TextBlock>
+
+    </Grid>
+    
+</Page>

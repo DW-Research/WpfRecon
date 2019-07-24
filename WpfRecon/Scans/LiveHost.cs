@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using System.Net.NetworkInformation;
 using WpfRecon;
 using System.Windows;
+using WpfRecon.Models;
+using WpfRecon.Wrappers;
+using WpfRecon.Interfaces;
 
 namespace WpfRecon.Scans
 {
@@ -13,37 +16,22 @@ namespace WpfRecon.Scans
     {
 
         //TO-DO add error codes, This is not a live host, this is not a correct IP.
-        public string PingSweep(string IPaddress)
+        public ScanResult PingSweep(string IpAddress)
         {
-            var successText = "This is not a live host";
-            //var mp = new MainWindow();
-            Ping p = new Ping();
-            PingReply r;
-            string s;
-            s = IPaddress;
-            r = p.Send(IPaddress);
+            PingWrapper ping = new PingWrapper();
 
-            if (r.Status == IPStatus.Success)
-            { 
-                successText = "Ping to " + s.ToString() + " Successful"
-                   + " Response delay = " + r.RoundtripTime.ToString() + " ms" + "\n";
-                return successText;
-            }
-            return successText;
-        }
-
-        private void IpAddress_Validated(object sender, EventArgs e)
-        {
-            var mp = new MainPage();
-            if (string.IsNullOrWhiteSpace(mp.IpAddress.Text) || mp.IpAddress.Text == "")
+            ScanResult result = new ScanResult
             {
-                MessageBox.Show("Please use valid IP or web address!!!");
-            }
-             
-     
+                IpAdress = IpAddress,
+                PingReply = ping.Send(IpAddress)
+            };
+
+            return result;
         }
     }
-}   
+}
+
+
             
             
             

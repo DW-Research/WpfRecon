@@ -64,15 +64,18 @@
     <Compile Include="About.xaml.cs">
       <DependentUpon>About.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IPingWrapper.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\ScanResult.cs" />
     <Compile Include="Results.xaml.cs">
       <DependentUpon>Results.xaml</DependentUpon>
     </Compile>
     <Compile Include="Scans\LiveHost.cs" />
     <Compile Include="Scans\Port.Scan.cs" />
     <Compile Include="Scans\PortList.cs" />
+    <Compile Include="Wrappers\PingWrapper.cs" />
     <Page Include="About.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfRecon.Models;
 using WpfRecon.Scans;
 
 namespace WpfRecon
@@ -21,6 +22,8 @@ namespace WpfRecon
     /// </summary>
     public partial class MainPage : Page
     {
+        private ScanResult scanResult { get; set; }
+
         public MainPage()
         {
             InitializeComponent();
@@ -41,10 +44,9 @@ namespace WpfRecon
 
         private void Scan_Click(object sender, RoutedEventArgs e)
         {
-            LiveHost lh = new LiveHost();
-
-            Output.Text = lh.PingSweep(IpAddress.Text);
-
+            LiveHost liveHost = new LiveHost();
+            scanResult = liveHost.PingSweep(IpAddress.Text);
+            Output.Text = scanResult.ToString();
         }
 
         private void Firsttest_SelectionChanged(object sender, RoutedEventArgs e)
@@ -77,6 +79,8 @@ namespace WpfRecon
 
         private void Results_Click(object sender, RoutedEventArgs e)
         {
+
+            //somehow send scanResult to the page
             // View The Results page 
             NavigationService.Navigate(new Uri("Results.xaml", UriKind.Relative));
         }

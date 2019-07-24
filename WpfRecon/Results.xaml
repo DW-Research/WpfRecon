@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:gif="http://wpfanimatedgif.codeplex.com"
       xmlns:local="clr-namespace:WpfRecon"
       mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="1080"
       Title="Results">
@@ -17,13 +18,14 @@
             <RowDefinition Height="144*"/>
         </Grid.RowDefinitions>
 
-        <Menu HorizontalAlignment="Left" Height="407" VerticalAlignment="Top" Width="151" Background="#FF292626" Grid.RowSpan="5" Margin="0,96,0,0" Grid.Row="1" >
+        <Image gif:ImageBehavior.AnimatedSource="C:\Users\patrick.wake\source\repos\WpfRecon\WpfRecon\Assets\BackGround.gif" x:Name="Gif" Margin="0,0,-36.333,0" Grid.RowSpan="6" VerticalAlignment="Top" Source="C:\Users\patrick.wake\source\repos\WpfRecon\WpfRecon\Assets\BackGround.gif" RenderTransformOrigin="0.5,0.5" Height="800" Stretch="Fill"/>
+
+        <Menu x:Name="Menu" HorizontalAlignment="Left" Height="407" VerticalAlignment="Top" Width="151" Background="{x:Null}" Grid.RowSpan="5" Margin="0,96,0,0" Grid.Row="1" >
             <MenuItem x:Name="Home" Header="Home" Height="72" Width="140.667" Foreground="#FFF7EFEF" FontSize="18" Click="Home_Click"/>
             <MenuItem x:Name="Results" Header="Results" Height="72" Width="141" Foreground="#FFF7EFEF" FontSize="18"/>
             <MenuItem x:Name="About" Header="About" Height="72" Width="141" Foreground="#FFF7EFEF" FontSize="18" Click="About_Click"/>
         </Menu>
-        <TextBlock x:Name="FullResults" HorizontalAlignment="Left" Height="706" Margin="151,44,0,0" Grid.RowSpan="6" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="863"/>
-
+        <TextBlock x:Name="FullResults" HorizontalAlignment="Left" Height="706" Margin="151,44,0,0" Grid.RowSpan="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="863" Foreground="White" Background="#FF14424F" Opacity="0.85"/>
     </Grid>
 
 

@@ -34,7 +34,7 @@ namespace WpfRecon.Scans
 
         private void IpAddress_Validated(object sender, EventArgs e)
         {
-            var mp = new MainWindow();
+            var mp = new MainPage();
             if (string.IsNullOrWhiteSpace(mp.IpAddress.Text) || mp.IpAddress.Text == "")
             {
                 MessageBox.Show("Please use valid IP or web address!!!");

@@ -24,17 +24,27 @@ namespace WpfRecon
         {
             InitializeComponent();
         }
-       
+
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-            // View The Home page 
-            NavigationService.Navigate(new MainWindow());
+
+
+
+            // View The Home page  
+            NavigationService.Navigate(new Uri("MainPage.xaml", UriKind.Relative));
         }
 
         private void About_Click(object sender, RoutedEventArgs e)
         {
+
             // View The About page 
-            NavigationService.Navigate(new AboutPage());
+            NavigationService.Navigate(new Uri("About.xaml", UriKind.Relative));
+        }
+
+        private void Results_Click(object sender, RoutedEventArgs e)
+        {
+            // View The Results page 
+            NavigationService.Navigate(new Uri("Results.xaml", UriKind.Relative));
         }
     }
 }

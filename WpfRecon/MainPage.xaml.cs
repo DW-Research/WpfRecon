@@ -12,18 +12,55 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfRecon.Scans;
 
 namespace WpfRecon
 {
     /// <summary>
-    /// Interaction logic for Results.xaml
+    /// Interaction logic for MainPage.xaml
     /// </summary>
-    public partial class ResultsPage : Page
+    public partial class MainPage : Page
     {
-        public ResultsPage()
+        public MainPage()
         {
             InitializeComponent();
+
+            var FirstTestText = Output.Text;
+            
         }
+
+        public TextBox MyTextBox
+        {
+            get { return IpAddress; }
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Scan_Click(object sender, RoutedEventArgs e)
+        {
+            LiveHost lh = new LiveHost();
+
+            Output.Text = lh.PingSweep(IpAddress.Text);
+
+        }
+
+        private void Firsttest_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void ProgressBar_ValueChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ProgressBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
+
         private void Home_Click(object sender, RoutedEventArgs e)
         {
 

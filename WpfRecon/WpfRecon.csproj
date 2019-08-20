@@ -141,5 +141,9 @@
   <ItemGroup>
     <Resource Include="Assets\hacker-logo-color.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

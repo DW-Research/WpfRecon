@@ -24,13 +24,13 @@
                 <RowDefinition Height="36*"/>
                 <RowDefinition Height="144*"/>
             </Grid.RowDefinitions>
-            <Image gif:ImageBehavior.AnimatedSource="C:\Users\patrick.wake\source\repos\WpfRecon\WpfRecon\Assets\BackGround.gif" x:Name="Gif" Margin="0,0,-35.667,-0.333" Grid.RowSpan="6" VerticalAlignment="Top" Source="C:\Users\patrick.wake\source\repos\WpfRecon\WpfRecon\Assets\BackGround.gif" RenderTransformOrigin="0.5,0.5" Height="771" Stretch="Fill" Grid.ColumnSpan="3"/>
+            <Image gif:ImageBehavior.AnimatedSource=".\Assets\BackGround.gif" x:Name="Gif" Margin="0,0,-35.667,-0.333" Grid.RowSpan="6" VerticalAlignment="Top" Source=".\Assets\BackGround.gif" RenderTransformOrigin="0.5,0.5" Height="771" Stretch="Fill" Grid.ColumnSpan="3"/>
             <TextBlock x:Name="Output" Height="262.667" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" Foreground="Aqua"  x:FieldModifier="public" Margin="199,194.073,61,0" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="4" Background="#FF14424F" Opacity="0.85"/>
             <ProgressBar Height="16" Margin="235.333,145.026,0,0" VerticalAlignment="Top" BorderBrush="#6637FF0A" Background="#FF06B0B0"  ValueChanged="ProgressBar_ValueChanged" Grid.Row="2"/>
             <TextBox x:Name="IpAddress" BorderThickness="5" HorizontalAlignment="Center" VerticalAlignment="Center" Height="58" Width="255" BorderBrush="#FF12A4A4" Background="Transparent" TextChanged="TextBox_TextChanged" Margin="438.34,54.68,200.007,164.68" x:FieldModifier="public" MaxLength="18" MaxLines="1" ToolTip="IP Address" Grid.Row="2" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" FontStretch="UltraExpanded" Foreground="#FFFBFFFF" CaretBrush="white"/>
             <Button x:Name="Scan" HorizontalAlignment="Center" Height="58" VerticalAlignment="Center" Width="59"  BorderThickness="0,0,0,0"   Click="Scan_Click"  Margin="781.007,54.68,53.34,164.68" Content="Scan" Grid.Row="2" RenderTransformOrigin="0.441,0.253">
                 <Button.Background>
-                    <ImageBrush ImageSource="C:\Users\patrick.wake\source\repos\WpfRecon\WpfRecon\Assets\NeonButton.png"/>
+                    <ImageBrush ImageSource="C:\Users\patrick\source\repos\WpfRecon\WpfRecon\Assets\NeonButton.png"/>
                 </Button.Background>
             </Button>
             <Image  Height="85.333" Margin="180.334,10,32.56,0"  VerticalAlignment="Top" Source="Assets/hacker-logo-color.png" Grid.ColumnSpan="2">

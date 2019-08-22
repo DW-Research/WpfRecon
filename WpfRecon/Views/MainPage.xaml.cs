@@ -67,14 +67,14 @@ namespace WpfRecon
         {
 
             // View The Home page  
-            NavigationService.Navigate(new Uri("MainPage.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("Views/MainPage.xaml", UriKind.Relative));
         }
 
         private void About_Click(object sender, RoutedEventArgs e)
         {
 
             // View The About page 
-            NavigationService.Navigate(new Uri("About.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("Views/About.xaml", UriKind.Relative));
         }
 
         private void Results_Click(object sender, RoutedEventArgs e)
@@ -82,7 +82,7 @@ namespace WpfRecon
 
             //somehow send scanResult to the page
             // View The Results page 
-            NavigationService.Navigate(new Uri("Results.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("Views/Results.xaml", UriKind.Relative));
         }
     }
 }

@@ -16,35 +16,32 @@ using System.Windows.Shapes;
 namespace WpfRecon
 {
     /// <summary>
-    /// Interaction logic for About.xaml
+    /// Interaction logic for Results.xaml
     /// </summary>
-    public partial class AboutPage : Page
+    public partial class ResultsPage : Page
     {
-        public AboutPage()
+        public ResultsPage()
         {
             InitializeComponent();
         }
-
         private void Home_Click(object sender, RoutedEventArgs e)
         {
 
-
-
             // View The Home page  
-            NavigationService.Navigate(new Uri("MainPage.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("Views/MainPage.xaml", UriKind.Relative));
         }
 
         private void About_Click(object sender, RoutedEventArgs e)
         {
 
             // View The About page 
-            NavigationService.Navigate(new Uri("About.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("Views/About.xaml", UriKind.Relative));
         }
 
         private void Results_Click(object sender, RoutedEventArgs e)
         {
             // View The Results page 
-            NavigationService.Navigate(new Uri("Results.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("Views/Results.xaml", UriKind.Relative));
         }
     }
 }

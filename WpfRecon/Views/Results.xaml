@@ -18,7 +18,7 @@
             <RowDefinition Height="144*"/>
         </Grid.RowDefinitions>
 
-        <Image gif:ImageBehavior.AnimatedSource=".\Assets\BackGround.gif" x:Name="Gif" Margin="0,0,-36.333,0" Grid.RowSpan="6" VerticalAlignment="Top" Source=".\Assets\BackGround.gif" RenderTransformOrigin="0.5,0.5" Height="800" Stretch="Fill"/>
+        <Image gif:ImageBehavior.AnimatedSource="..\Assets\BackGround.gif" x:Name="Gif" Margin="0,0,-36.333,0" Grid.RowSpan="6" VerticalAlignment="Top" Source="..\Assets\BackGround.gif" RenderTransformOrigin="0.5,0.5" Height="800" Stretch="Fill"/>
 
         <Menu x:Name="Menu" HorizontalAlignment="Left" Height="407" VerticalAlignment="Top" Width="151" Background="{x:Null}" Grid.RowSpan="5" Margin="0,96,0,0" Grid.Row="1" >
             <MenuItem x:Name="Home" Header="Home" Height="72" Width="140.667" Foreground="#FFF7EFEF" FontSize="18" Click="Home_Click"/>

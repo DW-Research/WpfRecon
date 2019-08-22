@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using WpfRecon.Interfaces;
 
 namespace WpfRecon.Wrappers
+    //This is the ICMP PingReply rapper that will allow me to conduct Nunit testing.
 {
         public class PingWrapper : IPingWrapper
         {
@@ -15,6 +16,7 @@ namespace WpfRecon.Wrappers
                 var ping = new Ping();
                 return ping.Send(IpAddress);
             }
+        // TODO: Task Number One - Do not allow words only allow for numbers and a dash
         }
     }
 

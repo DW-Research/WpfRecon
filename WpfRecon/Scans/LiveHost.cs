@@ -15,7 +15,7 @@ namespace WpfRecon.Scans
     public class LiveHost
     {
 
-        //TO-DO add error codes, This is not a live host, this is not a correct IP.
+        //This is the ICMP request that uses the Pingwrapper and interface to send a ping and display a result on the main page
         public ScanResult PingSweep(string IpAddress)
         {
             PingWrapper ping = new PingWrapper();

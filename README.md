@@ -13,4 +13,8 @@ As my goal is to create my own security tool, rather than using other developerâ
 
 I have decided that as part of the project I would like to create something a little different and once again try out a new technology that I havenâ€™t used so far in MSc. 
 
-Install Instructions
+# Install Instructions 
+
+
+
+Logo taken from FireEye https://www.fireeye.com/blog/threat-research/2019/03/commando-vm-windows-offensive-distribution.html

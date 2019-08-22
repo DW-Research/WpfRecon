@@ -11,7 +11,17 @@ This project will aim to create a network mapping and reconnaissance tool common
 
 As my goal is to create my own security tool, rather than using other developer’s applications and scripts, It will enable me to improve my programming skills and my understanding on how the tools work in the background. 
 
-I have decided that as part of the project I would like to create something a little different and once again try out a new technology that I haven’t used so far in MSc. 
+I have decided that as part of the project I would like to create something a little different and once again try out a new langage and technology that I haven’t used so far in MSc. 
+
+Insperation has been taken from Nmap and SPARTA projects.
+
+# Progress
+
+* UI 98%
+* Functionality 0.1%
+* Elegent Code - MVVM Design 40% 
+* Testing 10%
+
 
 # Install Instructions 
 

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfRecon.Models;
-using WpfRecon.Scans;
+using WpfRecon.ViewModels;
 
 namespace WpfRecon
 {
@@ -44,9 +44,9 @@ namespace WpfRecon
 
         private void Scan_Click(object sender, RoutedEventArgs e)
         {
-            LiveHost liveHost = new LiveHost();
-            scanResult = liveHost.PingSweep(IpAddress.Text);
-            Output.Text = scanResult.ToString();
+            var MPVM = new MainPageVM();
+           
+            Output.Text = (MPVM.DisplayOutput(IpAddress.Text));
         }
 
         private void Firsttest_SelectionChanged(object sender, RoutedEventArgs e)

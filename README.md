@@ -18,13 +18,12 @@ Insperation has been taken from Nmap and SPARTA projects.
 # Progress
 
 * UI 98%
-* Functionality 0.1%
+* **Functionality 0.1%**
 * Elegent Code - MVVM Design 40% 
 * Testing 10%
 
 
-# Install Instructions 
-
+# Misc 
 
 
 Logo taken from FireEye https://www.fireeye.com/blog/threat-research/2019/03/commando-vm-windows-offensive-distribution.html

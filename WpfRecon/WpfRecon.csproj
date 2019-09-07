@@ -79,7 +79,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\NmapScan.cs" />
     <Compile Include="ViewModels\MainPageVM.cs" />
+    <Compile Include="ViewModels\ResultPageVM.cs" />
     <Compile Include="Views\About.xaml.cs">
       <DependentUpon>About.xaml</DependentUpon>
     </Compile>
@@ -92,8 +94,6 @@
       <DependentUpon>Results.xaml</DependentUpon>
     </Compile>
     <Compile Include="Scans\LiveHost.cs" />
-    <Compile Include="Scans\Port.Scan.cs" />
-    <Compile Include="Scans\PortList.cs" />
     <Compile Include="Wrappers\PingWrapper.cs" />
     <Page Include="Views\About.xaml">
       <SubType>Designer</SubType>

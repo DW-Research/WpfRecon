@@ -24,5 +24,9 @@ namespace WpfRecon.Models
                 + "Result: " + successMessage;
         }
 
+        public static implicit operator ScanResult(mapScanResult v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

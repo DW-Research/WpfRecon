@@ -28,7 +28,7 @@ namespace WpfRecon
         {
             InitializeComponent();
 
-            var FirstTestText = Output.Text;
+            var Output = this.Output.Text;
             
         }
 

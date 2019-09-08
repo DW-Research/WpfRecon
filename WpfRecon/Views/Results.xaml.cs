@@ -27,11 +27,10 @@ namespace WpfRecon
             InitializeComponent();
             var RPVM = new ResultPageVM();
 
-            FullResults.Text = (RPVM.DisplayOutput(mapScanResult.Text));
+            FullResults.Text = (RPVM.DisplayOutput(ViewModels.ResultPageVM.NmapScan.Text));
         }
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-
             // View The Home page  
             NavigationService.Navigate(new Uri("Views/MainPage.xaml", UriKind.Relative));
         }

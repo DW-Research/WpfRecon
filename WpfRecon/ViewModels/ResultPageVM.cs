@@ -11,14 +11,14 @@ namespace WpfRecon.ViewModels
     class ResultPageVM
     {
    
-        public ScanResult NmapScanResult { get; private set; }
+        public ScanResult NmapScan { get; private set; }
 
         public string DisplayOutput(string nmapScanResult)
         {
 
-            NmapScanResult NmapScan = new NmapScanResult();
-            NmapScanResult = NmapScan;
-            return NmapScanResult.ToString();
+            ResultsPage NmapScan = new ResultsPage();
+            NmapScan = NmapScan;
+            return NmapScan.ToString();
         }
     }
 }

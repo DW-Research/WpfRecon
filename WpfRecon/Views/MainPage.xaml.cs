@@ -45,7 +45,8 @@ namespace WpfRecon
         private void Scan_Click(object sender, RoutedEventArgs e)
         {
             var MPVM = new MainPageVM();
-           
+
+  
             Output.Text = (MPVM.DisplayOutput(IpAddress.Text));
         }
 

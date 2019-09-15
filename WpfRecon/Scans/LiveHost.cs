@@ -26,6 +26,9 @@ namespace WpfRecon.Scans
                 PingReply = ping.Send(IpAddress)
             };
 
+            State.SuccessfulPing = result.PingReply.Status == IPStatus.Success;
+            State.IPAddress = result.IpAdress;
+
             return result;
         }
     }

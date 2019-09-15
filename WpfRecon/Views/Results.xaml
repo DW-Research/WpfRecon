@@ -25,7 +25,9 @@
             <MenuItem x:Name="Results" Header="Results" Height="72" Width="141" Foreground="#FFF7EFEF" FontSize="18"/>
             <MenuItem x:Name="About" Header="About" Height="72" Width="141" Foreground="#FFF7EFEF" FontSize="18" Click="About_Click"/>
         </Menu>
+        <ScrollViewer Margin="0,0,0,48.794" Grid.RowSpan="6">
         <TextBlock x:Name="FullResults" HorizontalAlignment="Left" Height="706" Margin="151,44,0,0" Grid.RowSpan="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="863" Foreground="White" Background="#FF14424F" Opacity="0.85"/>
+        </ScrollViewer>
     </Grid>
 
 

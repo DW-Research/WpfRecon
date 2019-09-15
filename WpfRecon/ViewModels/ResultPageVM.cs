@@ -10,15 +10,21 @@ namespace WpfRecon.ViewModels
 {
     class ResultPageVM
     {
-   
-        public ScanResult NmapScan { get; private set; }
+
+        private readonly NMapScan NmapScan;
+
+        public ResultPageVM()
+        {
+            NmapScan = new NMapScan();
+        }
 
         public string DisplayOutput(string nmapScanResult)
         {
-
-            ResultsPage NmapScan = new ResultsPage();
-            NmapScan = NmapScan;
-            return NmapScan.ToString();
+            if(State.SuccessfulPing)
+            {
+                return NmapScan.RunScan(State.IPAddress);
+            }
+            return "Ping unsuccessful";
         }
     }
 }

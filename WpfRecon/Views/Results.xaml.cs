@@ -27,7 +27,7 @@ namespace WpfRecon
             InitializeComponent();
             var RPVM = new ResultPageVM();
 
-            FullResults.Text = (RPVM.DisplayOutput(ViewModels.ResultPageVM.NmapScan.Text));
+            FullResults.Text = (RPVM.DisplayOutput(string.Empty));
         }
         private void Home_Click(object sender, RoutedEventArgs e)
         {

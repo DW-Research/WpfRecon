@@ -17,6 +17,7 @@ namespace WpfRecon.ViewModels
 
             LiveHost liveHost = new LiveHost();
             ScanResult = liveHost.PingSweep(IPaddress);
+
             return ScanResult.ToString();
         }
     }

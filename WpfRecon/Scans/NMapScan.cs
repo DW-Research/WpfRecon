@@ -31,7 +31,7 @@ namespace WpfRecon.Scans
                     sb.Append("-sC ");
                     sb.Append(IpAddress);
                     myProcess.StartInfo.Arguments = sb.ToString();
-                    
+                    myProcess.StartInfo.CreateNoWindow = true;
                     myProcess.StartInfo.RedirectStandardOutput = true;
                     myProcess.StartInfo.RedirectStandardError = true;
 

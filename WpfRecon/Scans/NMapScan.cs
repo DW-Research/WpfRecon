@@ -19,16 +19,15 @@ namespace WpfRecon.Scans
                 {
                     myProcess.StartInfo.UseShellExecute = false;
                     //this will use the nmap external tool that is stored in the External Tools folder
-                    myProcess.StartInfo.WorkingDirectory = "ExternalTools/";
                     //Running the nmap tool 
-                    myProcess.StartInfo.FileName = "nmap.exe";
+                    myProcess.StartInfo.FileName = "ExternalTools//nmap.exe";
                     //Running the options
                     var sb = new StringBuilder();
                     // show version option
-                    sb.Append("-sV ");
+                    sb.Append("-h");
                     // running the 
-                    sb.Append("-A ");
-                    sb.Append("-sC ");
+                   // sb.Append("-A ");
+                   // sb.Append("-sC ");
                     sb.Append(IpAddress);
                     myProcess.StartInfo.Arguments = sb.ToString();
                     myProcess.StartInfo.CreateNoWindow = true;

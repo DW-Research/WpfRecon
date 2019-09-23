@@ -24,10 +24,10 @@ namespace WpfRecon.Scans
                     //Running the options
                     var sb = new StringBuilder();
                     // show version option
-                    sb.Append("-h");
-                    // running the 
-                   // sb.Append("-A ");
-                   // sb.Append("-sC ");
+                    //sb.Append("-T5 ");
+                    // running the scripts
+                    //sb.Append("-F ");
+                    // sb.Append("-A ");
                     sb.Append(IpAddress);
                     myProcess.StartInfo.Arguments = sb.ToString();
                     myProcess.StartInfo.CreateNoWindow = true;

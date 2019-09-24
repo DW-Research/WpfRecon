@@ -10,7 +10,7 @@ namespace WpfRecon.ViewModels
 {
     class ResultPageVM
     {
-
+        
         private readonly NMapScan NmapScan;
 
         public ResultPageVM()

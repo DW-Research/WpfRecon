@@ -75,6 +75,7 @@ namespace WpfRecon
         {
 
         }
+        //TODO: Add a progress bar to show that the application is still working when running in the scan
         private void ProgressBar_ValueChanged(object sender, RoutedEventArgs e)
         {
 

@@ -18,15 +18,19 @@ namespace WpfRecon.Scans
                 using (Process myProcess = new Process())
                 {
                     myProcess.StartInfo.UseShellExecute = false;
+
+                    //TODO: Fix full scan functionality by putting all of the nmap scripts in one location or fidning a way to mane Nmap locate the rest of the scripts 
+
                     //this will use the nmap external tool that is stored in the External Tools folder
                     //Running the nmap tool 
                     myProcess.StartInfo.FileName = "ExternalTools//nmap.exe";
                     //Running the options
                     var sb = new StringBuilder();
-                    // show version option
+                    // Fastest insain mode 
                     //sb.Append("-T5 ");
-                    // running the scripts
+                    // Test popular ports 
                     //sb.Append("-F ");
+                    //full enumeration scan 
                     // sb.Append("-A ");
                     sb.Append(IpAddress);
                     myProcess.StartInfo.Arguments = sb.ToString();

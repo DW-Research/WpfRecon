@@ -29,6 +29,8 @@ namespace WpfRecon
 
             FullResults.Text = (RPVM.DisplayOutput(string.Empty));
         }
+
+        //TODO: for some reason when the the nmap results are put in the results page the navigation pane stops working... 
         private void Home_Click(object sender, RoutedEventArgs e)
         {
             // View The Home page  

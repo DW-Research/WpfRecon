@@ -27,11 +27,11 @@ namespace WpfRecon.Scans
                     //Running the options
                     var sb = new StringBuilder();
                     // Fastest insain mode 
-                    //sb.Append("-T5 ");
+                    sb.Append("-T5 ");
                     // Test popular ports 
-                    //sb.Append("-F ");
+                    sb.Append("-F ");
                     //full enumeration scan 
-                    // sb.Append("-A ");
+                    //sb.Append("-sV ");
                     sb.Append(IpAddress);
                     //add the arguments to the end of the nmap scan
                     myProcess.StartInfo.Arguments = sb.ToString();

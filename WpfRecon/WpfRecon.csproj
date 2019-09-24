@@ -190,64 +190,64 @@
     <None Include="ExternalTools\nmap_performance.reg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\afp.lua">
+    <None Include="ExternalTools\afp.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\ajp.lua">
+    <None Include="ExternalTools\ajp.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\amqp.lua">
+    <None Include="ExternalTools\amqp.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\anyconnect.lua">
+    <None Include="ExternalTools\anyconnect.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\asn1.lua">
+    <None Include="ExternalTools\asn1.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\base32.lua">
+    <None Include="ExternalTools\base32.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\base64.lua">
+    <None Include="ExternalTools\base64.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\bin.lua">
+    <None Include="ExternalTools\bin.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\bitcoin.lua">
+    <None Include="ExternalTools\bitcoin.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\bits.lua">
+    <None Include="ExternalTools\bits.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\bittorrent.lua">
+    <None Include="ExternalTools\bittorrent.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\bjnp.lua">
+    <None Include="ExternalTools\bjnp.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\brute.lua">
+    <None Include="ExternalTools\brute.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\cassandra.lua">
+    <None Include="ExternalTools\cassandra.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\citrixxml.lua">
+    <None Include="ExternalTools\citrixxml.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\coap.lua">
+    <None Include="ExternalTools\coap.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\comm.lua">
+    <None Include="ExternalTools\comm.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\creds.lua">
+    <None Include="ExternalTools\creds.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\cvs.lua">
+    <None Include="ExternalTools\cvs.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\datafiles.lua">
+    <None Include="ExternalTools\datafiles.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ExternalTools\nselib\data\dns-srv-names">
@@ -325,355 +325,355 @@
     <None Include="ExternalTools\nselib\data\targets-ipv6-wordlist">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\datetime.lua">
+    <None Include="ExternalTools\datetime.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\dhcp.lua">
+    <None Include="ExternalTools\dhcp.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\dhcp6.lua">
+    <None Include="ExternalTools\dhcp6.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\dns.lua">
+    <None Include="ExternalTools\dns.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\dnsbl.lua">
+    <None Include="ExternalTools\dnsbl.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\dnssd.lua">
+    <None Include="ExternalTools\dnssd.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\drda.lua">
+    <None Include="ExternalTools\drda.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\eap.lua">
+    <None Include="ExternalTools\eap.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\eigrp.lua">
+    <None Include="ExternalTools\eigrp.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\formulas.lua">
+    <None Include="ExternalTools\formulas.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\ftp.lua">
+    <None Include="ExternalTools\ftp.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\geoip.lua">
+    <None Include="ExternalTools\geoip.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\giop.lua">
+    <None Include="ExternalTools\giop.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\gps.lua">
+    <None Include="ExternalTools\gps.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\http.lua">
+    <None Include="ExternalTools\http.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\httpspider.lua">
+    <None Include="ExternalTools\httpspider.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\iax2.lua">
+    <None Include="ExternalTools\iax2.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\idna.lua">
+    <None Include="ExternalTools\idna.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\ike.lua">
+    <None Include="ExternalTools\ike.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\imap.lua">
+    <None Include="ExternalTools\imap.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\informix.lua">
+    <None Include="ExternalTools\informix.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\ipmi.lua">
+    <None Include="ExternalTools\ipmi.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\ipOps.lua">
+    <None Include="ExternalTools\ipOps.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\ipp.lua">
+    <None Include="ExternalTools\ipp.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\irc.lua">
+    <None Include="ExternalTools\irc.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\iscsi.lua">
+    <None Include="ExternalTools\iscsi.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\isns.lua">
+    <None Include="ExternalTools\isns.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\jdwp.lua">
+    <None Include="ExternalTools\jdwp.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\json.lua">
+    <None Include="ExternalTools\json.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\knx.lua">
+    <None Include="ExternalTools\knx.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\ldap.lua">
+    <None Include="ExternalTools\ldap.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\lfs.luadoc">
+    <None Include="ExternalTools\lfs.luadoc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\libssh2-utility.lua">
+    <None Include="ExternalTools\libssh2-utility.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\libssh2.luadoc">
+    <None Include="ExternalTools\libssh2.luadoc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\listop.lua">
+    <None Include="ExternalTools\listop.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\lpeg-utility.lua">
+    <None Include="ExternalTools\lpeg-utility.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\lpeg.luadoc">
+    <None Include="ExternalTools\lpeg.luadoc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\ls.lua">
+    <None Include="ExternalTools\ls.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\match.lua">
+    <None Include="ExternalTools\match.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\membase.lua">
+    <None Include="ExternalTools\membase.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\mobileme.lua">
+    <None Include="ExternalTools\mobileme.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\mongodb.lua">
+    <None Include="ExternalTools\mongodb.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\mqtt.lua">
+    <None Include="ExternalTools\mqtt.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\msrpc.lua">
+    <None Include="ExternalTools\msrpc.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\msrpcperformance.lua">
+    <None Include="ExternalTools\msrpcperformance.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\msrpctypes.lua">
+    <None Include="ExternalTools\msrpctypes.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\mssql.lua">
+    <None Include="ExternalTools\mssql.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\multicast.lua">
+    <None Include="ExternalTools\multicast.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\mysql.lua">
+    <None Include="ExternalTools\mysql.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\natpmp.lua">
+    <None Include="ExternalTools\natpmp.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\nbd.lua">
+    <None Include="ExternalTools\nbd.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\ncp.lua">
+    <None Include="ExternalTools\ncp.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\ndmp.lua">
+    <None Include="ExternalTools\ndmp.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\netbios.lua">
+    <None Include="ExternalTools\netbios.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\nmap.luadoc">
+    <None Include="ExternalTools\nmap.luadoc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\nrpc.lua">
+    <None Include="ExternalTools\nrpc.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\nsedebug.lua">
+    <None Include="ExternalTools\nsedebug.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\omp2.lua">
+    <None Include="ExternalTools\omp2.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\oops.lua">
+    <None Include="ExternalTools\oops.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\openssl.luadoc">
+    <None Include="ExternalTools\openssl.luadoc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\ospf.lua">
+    <None Include="ExternalTools\ospf.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\packet.lua">
+    <None Include="ExternalTools\packet.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\pcre.luadoc">
+    <None Include="ExternalTools\pcre.luadoc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\pgsql.lua">
+    <None Include="ExternalTools\pgsql.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\pop3.lua">
+    <None Include="ExternalTools\pop3.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\pppoe.lua">
+    <None Include="ExternalTools\pppoe.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\proxy.lua">
+    <None Include="ExternalTools\proxy.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\punycode.lua">
+    <None Include="ExternalTools\punycode.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\rand.lua">
+    <None Include="ExternalTools\rand.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\rdp.lua">
+    <None Include="ExternalTools\rdp.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\re.lua">
+    <None Include="ExternalTools\re.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\redis.lua">
+    <None Include="ExternalTools\redis.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\rmi.lua">
+    <None Include="ExternalTools\rmi.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\rpc.lua">
+    <None Include="ExternalTools\rpc.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\rpcap.lua">
+    <None Include="ExternalTools\rpcap.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\rsync.lua">
+    <None Include="ExternalTools\rsync.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\rtsp.lua">
+    <None Include="ExternalTools\rtsp.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\sasl.lua">
+    <None Include="ExternalTools\sasl.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\shortport.lua">
+    <None Include="ExternalTools\shortport.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\sip.lua">
+    <None Include="ExternalTools\sip.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\slaxml.lua">
+    <None Include="ExternalTools\slaxml.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\smb.lua">
+    <None Include="ExternalTools\smb.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\smb2.lua">
+    <None Include="ExternalTools\smb2.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\smbauth.lua">
+    <None Include="ExternalTools\smbauth.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\smtp.lua">
+    <None Include="ExternalTools\smtp.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\snmp.lua">
+    <None Include="ExternalTools\snmp.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\socks.lua">
+    <None Include="ExternalTools\socks.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\srvloc.lua">
+    <None Include="ExternalTools\srvloc.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\ssh1.lua">
+    <None Include="ExternalTools\ssh1.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\ssh2.lua">
+    <None Include="ExternalTools\ssh2.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\sslcert.lua">
+    <None Include="ExternalTools\sslcert.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\sslv2.lua">
+    <None Include="ExternalTools\sslv2.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\stdnse.lua">
+    <None Include="ExternalTools\stdnse.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\strbuf.lua">
+    <None Include="ExternalTools\strbuf.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\strict.lua">
+    <None Include="ExternalTools\strict.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\stringaux.lua">
+    <None Include="ExternalTools\stringaux.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\stun.lua">
+    <None Include="ExternalTools\stun.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\tab.lua">
+    <None Include="ExternalTools\tab.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\tableaux.lua">
+    <None Include="ExternalTools\tableaux.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\target.lua">
+    <None Include="ExternalTools\target.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\tftp.lua">
+    <None Include="ExternalTools\tftp.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\tls.lua">
+    <None Include="ExternalTools\tls.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\tn3270.lua">
+    <None Include="ExternalTools\tn3270.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\tns.lua">
+    <None Include="ExternalTools\tns.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\unicode.lua">
+    <None Include="ExternalTools\unicode.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\unittest.lua">
+    <None Include="ExternalTools\unittest.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\unpwdb.lua">
+    <None Include="ExternalTools\unpwdb.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\upnp.lua">
+    <None Include="ExternalTools\upnp.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\url.lua">
+    <None Include="ExternalTools\url.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\versant.lua">
+    <None Include="ExternalTools\versant.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\vnc.lua">
+    <None Include="ExternalTools\vnc.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\vulns.lua">
+    <None Include="ExternalTools\vulns.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\vuzedht.lua">
+    <None Include="ExternalTools\vuzedht.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\wsdd.lua">
+    <None Include="ExternalTools\wsdd.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\xdmcp.lua">
+    <None Include="ExternalTools\xdmcp.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\xmpp.lua">
+    <None Include="ExternalTools\xmpp.lua">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ExternalTools\nselib\zlib.luadoc">
+    <None Include="ExternalTools\zlib.luadoc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ExternalTools\nse_main.lua">

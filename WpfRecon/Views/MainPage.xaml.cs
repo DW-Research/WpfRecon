@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,20 +24,17 @@ namespace WpfRecon
     /// </summary>
     public partial class MainPage : Page
     {
-        private ScanResult scanResult { get; set; }
-
+        MainPageVM MPVM = new MainPageVM();
         public MainPage()
         {
             InitializeComponent();
-
-            var Output = this.Output.Text;
-            
+           
         }
 
-        public TextBox MyTextBox
-        {
-            get { return IpAddress; }
-        }
+        //public TextBox MyTextBox
+        //{
+        //    get { return IpAddress; }
+        //}
 
         //TODO: Create an error to report an incorrect IP Address to the homePage
 
@@ -65,9 +64,15 @@ namespace WpfRecon
 
         private void Scan_Click(object sender, RoutedEventArgs e)
         {
-            var MPVM = new MainPageVM();
+            pbStatus.IsIndeterminate = true;
+            BackgroundWorker worker = new BackgroundWorker();
+            worker.WorkerReportsProgress = true;
+            worker.DoWork += worker_DoWork;
+            worker.ProgressChanged += worker_ProgressChanged;
 
-  
+            worker.RunWorkerAsync();
+
+           
             Output.Text = (MPVM.DisplayOutput(IpAddress.Text));
         }
 
@@ -76,17 +81,8 @@ namespace WpfRecon
 
         }
         //TODO: Add a progress bar to show that the application is still working when running in the scan
-        private void ProgressBar_ValueChanged(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ProgressBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-
-        }
-
-        private void Home_Click(object sender, RoutedEventArgs e)
+       
+       private void Home_Click(object sender, RoutedEventArgs e)
         {
 
             // View The Home page  
@@ -107,5 +103,38 @@ namespace WpfRecon
             // View The Results page 
             NavigationService.Navigate(new Uri("Views/Results.xaml", UriKind.Relative));
         }
+
+
+        //private void Run_PBBar(object sender, EventArgs e)
+        //{
+        //    BackgroundWorker worker = new BackgroundWorker();
+        //    worker.WorkerReportsProgress = true;
+        //    worker.DoWork += worker_DoWork;
+        //    worker.ProgressChanged += worker_ProgressChanged;
+
+        //    worker.RunWorkerAsync();
+        //}
+
+        void worker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                //(sender as BackgroundWorker).ReportProgress(i);
+                //Thread.Sleep(100);
+                
+                MPVM.LoadNmapScanInBackground();
+                (sender as BackgroundWorker).ReportProgress(i);
+                
+                Thread.Sleep(100);
+
+            }
+
+        }
+
+        void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            pbStatus.Value = e.ProgressPercentage;
+        }
     }
+
 }

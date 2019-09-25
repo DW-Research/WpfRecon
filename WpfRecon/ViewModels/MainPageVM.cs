@@ -10,6 +10,7 @@ namespace WpfRecon.ViewModels
 {
     class MainPageVM
     {
+        public static string NmapScanResults;
         public ScanResult ScanResult { get; private set; }
 
         //Dispays the output of the ping to the mainpage textblock called output.txt
@@ -21,5 +22,22 @@ namespace WpfRecon.ViewModels
 
             return ScanResult.ToString();
         }
+
+        public string LoadNmapScanInBackground()
+        {
+            if (State.SuccessfulPing)
+            {
+                var DisplayNmap = new NMapScan();
+                NmapScanResults = DisplayNmap.RunScan(State.IPAddress).ToString();
+                return ScanResult.ToString();
+            }
+
+            else
+            {
+                return "Ping unsuccessful";
+
+            }
+        }
     }
 }
+

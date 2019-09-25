@@ -40,8 +40,6 @@ namespace WpfRecon.Scans
                     myProcess.StartInfo.RedirectStandardOutput = true;
                     myProcess.StartInfo.RedirectStandardError = true;
 
-                    
-
                     // myProcess.StartInfo.CreateNoWindow = true;
                     myProcess.Start();
                     

@@ -22,7 +22,7 @@ namespace WpfRecon.ViewModels
 
             return ScanResult.ToString();
         }
-
+        //if the ping is succsessful then run an nmap scan and display the resutls in the results page 
         public string LoadNmapScanInBackground()
         {
             if (State.SuccessfulPing)

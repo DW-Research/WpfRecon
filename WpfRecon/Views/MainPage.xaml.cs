@@ -31,11 +31,7 @@ namespace WpfRecon
            
         }
 
-        //public TextBox MyTextBox
-        //{
-        //    get { return IpAddress; }
-        //}
-
+      
         //TODO: Create an error to report an incorrect IP Address to the homePage
 
         public bool ValidateIPv4(string ipString)
@@ -64,7 +60,7 @@ namespace WpfRecon
 
         private void Scan_Click(object sender, RoutedEventArgs e)
         {
-            pbStatus.IsIndeterminate = true;
+           
             BackgroundWorker worker = new BackgroundWorker();
             worker.WorkerReportsProgress = true;
             worker.DoWork += worker_DoWork;
@@ -76,12 +72,7 @@ namespace WpfRecon
             Output.Text = (MPVM.DisplayOutput(IpAddress.Text));
         }
 
-        private void Firsttest_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
-        }
-        //TODO: Add a progress bar to show that the application is still working when running in the scan
-       
+   
        private void Home_Click(object sender, RoutedEventArgs e)
         {
 
@@ -99,7 +90,7 @@ namespace WpfRecon
         private void Results_Click(object sender, RoutedEventArgs e)
         {
 
-            //somehow send scanResult to the page
+            
             // View The Results page 
             NavigationService.Navigate(new Uri("Views/Results.xaml", UriKind.Relative));
         }
@@ -117,15 +108,16 @@ namespace WpfRecon
 
         void worker_DoWork(object sender, DoWorkEventArgs e)
         {
+            //TODO: Turn this into a while loop
             for (int i = 0; i < 20; i++)
             {
                 //(sender as BackgroundWorker).ReportProgress(i);
                 //Thread.Sleep(100);
-                
+
                 MPVM.LoadNmapScanInBackground();
                 (sender as BackgroundWorker).ReportProgress(i);
                 
-                Thread.Sleep(100);
+                Thread.Sleep(1000);
 
             }
 

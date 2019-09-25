@@ -14,10 +14,13 @@ namespace WpfRecon
     {
         public MainWindow()
         {
+            //this loads the mainpage and the whole appliation from there
             InitializeComponent();
             NavFrame.Navigate(new MainPage());
 
-        }
-    }
+            ////////////////////////////////////////
+            ///                                  ///
+        }   ///        Do not delete this!       ///
+    }       ////////////////////////////////////////
 }
    

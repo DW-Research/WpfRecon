@@ -60,7 +60,7 @@ namespace WpfRecon
 
         private void Scan_Click(object sender, RoutedEventArgs e)
         {
-           
+            pbStatus.IsIndeterminate = true;
             BackgroundWorker worker = new BackgroundWorker();
             worker.WorkerReportsProgress = true;
             worker.DoWork += worker_DoWork;
@@ -109,7 +109,7 @@ namespace WpfRecon
         void worker_DoWork(object sender, DoWorkEventArgs e)
         {
             //TODO: Turn this into a while loop
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 2; i++)
             {
                 //(sender as BackgroundWorker).ReportProgress(i);
                 //Thread.Sleep(100);
@@ -117,7 +117,7 @@ namespace WpfRecon
                 MPVM.LoadNmapScanInBackground();
                 (sender as BackgroundWorker).ReportProgress(i);
                 
-                Thread.Sleep(1000);
+                Thread.Sleep(100);
 
             }
 

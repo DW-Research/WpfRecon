@@ -19,7 +19,7 @@ namespace WpfRecon.Scans
                 {
                     myProcess.StartInfo.UseShellExecute = false;
 
-                    //TODO: Fix full scan functionality by putting all of the nmap scripts in one location or fidning a way to mane Nmap locate the rest of the scripts 
+                    //TODO: Fix full scan functionality by putting all of the nmap scripts in one location or finding a way to make Nmap locate the rest of the scripts 
 
                     //this will use the nmap external tool that is stored in the External Tools folder
                     //Running the nmap tool 

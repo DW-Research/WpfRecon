@@ -25,8 +25,13 @@
             <MenuItem x:Name="Results" Header="Results" Height="72" Width="141" Foreground="#FFF7EFEF" FontSize="18"/>
             <MenuItem x:Name="About" Header="About" Height="72" Width="141" Foreground="#FFF7EFEF" FontSize="18" Click="About_Click"/>
         </Menu>
-        <ScrollViewer Margin="109,0,-0.333,10" Grid.RowSpan="6">
-            <TextBlock x:Name="FullResults" HorizontalAlignment="Left" Height="790" Grid.RowSpan="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="827" Foreground="White" Background="#FF14424F" Opacity="0.85"/>
+        <Image  Height="54" Margin="751,10,-104.333,0"  VerticalAlignment="Top" Source="/WpfRecon;component/Assets/hacker-logo-color.png">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/WpfRecon;component/Assets/hacker-logo-color.png" Stretch="Uniform"/>
+            </Image.OpacityMask>
+        </Image>
+        <ScrollViewer Margin="109,64,-0.333,0" Grid.RowSpan="6">
+            <TextBlock x:Name="FullResults" HorizontalAlignment="Left" Height="744" Grid.RowSpan="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="789" Foreground="White" Background="#FF14424F" Opacity="0.85"/>
         </ScrollViewer>
     </Grid>
 

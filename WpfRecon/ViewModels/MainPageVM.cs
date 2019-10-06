@@ -10,6 +10,8 @@ namespace WpfRecon.ViewModels
 {
     class MainPageVM
     {
+        public event EventHandler ScanComplete;
+
         public static string NmapScanResults;
         public ScanResult ScanResult { get; private set; }
 
@@ -23,13 +25,14 @@ namespace WpfRecon.ViewModels
             return ScanResult.ToString();
         }
         //if the ping is succsessful then run an nmap scan and display the resutls in the results page 
-        public async Task<string> LoadNmapScanInBackgroundAsync(Action completionCallback )
+        public string LoadNmapScanInBackground(Action completionCallback )
         {
             if (State.SuccessfulPing)
             {
                 var DisplayNmap = new NMapScan();
-                NmapScanResults = await DisplayNmap.RunScan(State.IPAddress);
-                completionCallback();
+                NmapScanResults = DisplayNmap.RunScan(State.IPAddress).Result;
+                //completionCallback();
+                ScanComplete.Invoke(this, null);
                 return ScanResult.ToString();
             }
 

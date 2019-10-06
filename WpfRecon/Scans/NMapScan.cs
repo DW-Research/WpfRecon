@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.Threading;
 
 namespace WpfRecon.Scans
 {
@@ -52,7 +53,8 @@ namespace WpfRecon.Scans
                         stdOutSb.Append(myProcess.StandardOutput.ReadToEnd());
                         stdOutSb.Append(myProcess.StandardError.ReadToEnd());
                     }
-                       
+
+                    
 
                     return stdOutSb.ToString();
                 }

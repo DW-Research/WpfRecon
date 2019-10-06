@@ -58,30 +58,45 @@ namespace WpfRecon
 
         }
 
-        private async void Scan_Click(object sender, RoutedEventArgs e)
+        private void Scan_Click(object sender, RoutedEventArgs e)
         {
             pbStatus.IsIndeterminate = true;
-            
-            //BackgroundWorker worker = new BackgroundWorker();
-            //worker.WorkerReportsProgress = true;
-            //worker.DoWork += worker_DoWork;
-            //worker.ProgressChanged += worker_ProgressChanged;
+
+            BackgroundWorker worker = new BackgroundWorker();
+            worker.WorkerReportsProgress = true;
+            worker.DoWork += worker_DoWork;
+            worker.ProgressChanged += worker_ProgressChanged;
 
             Output.Text = (MPVM.DisplayOutput(IpAddress.Text));
-            await MPVM.LoadNmapScanInBackgroundAsync(() => {
-                pbStatus.Visibility = Visibility.Hidden;
-                Output.Text += "\nNMap Scan Completed, Check Results Pages for details.";
-            });
+            if (State.SuccessfulPing)
+                pbStatus.Visibility = Visibility.Visible;
+
+            MPVM.ScanComplete += ScanCompleteHandler;
+
+//            MPVM.LoadNmapScanInBackgroundAsync(() => {});
 
 
-//            worker.RunWorkerAsync();
+            worker.RunWorkerAsync();
 
            
             
         }
 
-   
-       private void Home_Click(object sender, RoutedEventArgs e)
+        private void worker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            MPVM.LoadNmapScanInBackground(() => { });
+        }
+
+        private void ScanCompleteHandler(object sender, EventArgs e)
+        {
+            this.Dispatcher.Invoke(() => {
+                pbStatus.Visibility = Visibility.Hidden;
+                Output.Text += "\nNMap Scan Completed, Check Results Pages for details.";
+            });
+            
+        }
+
+        private void Home_Click(object sender, RoutedEventArgs e)
         {
 
             // View The Home page  

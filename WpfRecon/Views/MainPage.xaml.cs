@@ -61,15 +61,23 @@ namespace WpfRecon
         private void Scan_Click(object sender, RoutedEventArgs e)
         {
             pbStatus.IsIndeterminate = true;
-            BackgroundWorker worker = new BackgroundWorker();
-            worker.WorkerReportsProgress = true;
-            worker.DoWork += worker_DoWork;
-            worker.ProgressChanged += worker_ProgressChanged;
+            
+            //BackgroundWorker worker = new BackgroundWorker();
+            //worker.WorkerReportsProgress = true;
+            //worker.DoWork += worker_DoWork;
+            //worker.ProgressChanged += worker_ProgressChanged;
 
-            worker.RunWorkerAsync();
+            Output.Text = (MPVM.DisplayOutput(IpAddress.Text));
+            MPVM.LoadNmapScanInBackground(() => {
+                pbStatus.Visibility = Visibility.Hidden;
+                Output.Text += "\nNMap Scan Completed, Check Results Pages for details.";
+            });
+
+
+//            worker.RunWorkerAsync();
 
            
-            Output.Text = (MPVM.DisplayOutput(IpAddress.Text));
+            
         }
 
    
@@ -93,6 +101,7 @@ namespace WpfRecon
             
             // View The Results page 
             NavigationService.Navigate(new Uri("Views/Results.xaml", UriKind.Relative));
+            
         }
 
 
@@ -108,20 +117,9 @@ namespace WpfRecon
 
         void worker_DoWork(object sender, DoWorkEventArgs e)
         {
-            //TODO: Turn this into a while loop
-            for (int i = 0; i < 2; i++)
-            {
-                //(sender as BackgroundWorker).ReportProgress(i);
-                //Thread.Sleep(100);
-
-                MPVM.LoadNmapScanInBackground();
-                (sender as BackgroundWorker).ReportProgress(i);
-                
-                Thread.Sleep(100);
-
-            }
-
+                MPVM.LoadNmapScanInBackground(() => { pbStatus.Visibility = Visibility.Hidden; });   
         }
+
 
         void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {

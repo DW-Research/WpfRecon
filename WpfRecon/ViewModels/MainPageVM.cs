@@ -23,12 +23,13 @@ namespace WpfRecon.ViewModels
             return ScanResult.ToString();
         }
         //if the ping is succsessful then run an nmap scan and display the resutls in the results page 
-        public string LoadNmapScanInBackground()
+        public string LoadNmapScanInBackground(Action completionCallback )
         {
             if (State.SuccessfulPing)
             {
                 var DisplayNmap = new NMapScan();
                 NmapScanResults = DisplayNmap.RunScan(State.IPAddress).ToString();
+                completionCallback();
                 return ScanResult.ToString();
             }
 
@@ -38,6 +39,8 @@ namespace WpfRecon.ViewModels
 
             }
         }
+
+        
     }
 }
 

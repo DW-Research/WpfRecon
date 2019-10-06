@@ -11,10 +11,11 @@ namespace WpfRecon.Scans
     {
     
 
-        public string RunScan(string IpAddress)
+        public async Task<string> RunScan(string IpAddress)
         {
             try
             {
+               
                 using (Process myProcess = new Process())
                 {
                     myProcess.StartInfo.UseShellExecute = false;
@@ -41,7 +42,9 @@ namespace WpfRecon.Scans
                     myProcess.StartInfo.RedirectStandardError = true;
 
                     // myProcess.StartInfo.CreateNoWindow = true;
-                    myProcess.Start();
+                    
+                    await Task.Run(() => myProcess.Start());
+                    //myProcess.Start();
                     
                     var stdOutSb = new StringBuilder();
                     while (!myProcess.HasExited)

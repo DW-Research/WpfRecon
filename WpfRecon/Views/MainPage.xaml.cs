@@ -58,7 +58,7 @@ namespace WpfRecon
 
         }
 
-        private void Scan_Click(object sender, RoutedEventArgs e)
+        private async void Scan_Click(object sender, RoutedEventArgs e)
         {
             pbStatus.IsIndeterminate = true;
             
@@ -68,7 +68,7 @@ namespace WpfRecon
             //worker.ProgressChanged += worker_ProgressChanged;
 
             Output.Text = (MPVM.DisplayOutput(IpAddress.Text));
-            MPVM.LoadNmapScanInBackground(() => {
+            await MPVM.LoadNmapScanInBackgroundAsync(() => {
                 pbStatus.Visibility = Visibility.Hidden;
                 Output.Text += "\nNMap Scan Completed, Check Results Pages for details.";
             });
@@ -115,10 +115,7 @@ namespace WpfRecon
         //    worker.RunWorkerAsync();
         //}
 
-        void worker_DoWork(object sender, DoWorkEventArgs e)
-        {
-                MPVM.LoadNmapScanInBackground(() => { pbStatus.Visibility = Visibility.Hidden; });   
-        }
+
 
 
         void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)

@@ -32,14 +32,16 @@ namespace WpfRecon
         }
 
        //TODO: Create an error to report an incorrect IP Address to the homePage
+       //This is a input validation field 
 
         public bool ValidateIPv4(string ipString)
         {
+            //if it is blank throw an error
             if (String.IsNullOrWhiteSpace(ipString))
             {
                 return false;
             }
-
+            // is is in the correct format if not error
             string[] splitValues = ipString.Split('.');
             if (splitValues.Length != 4)
             {
@@ -51,7 +53,7 @@ namespace WpfRecon
             return splitValues.All(r => byte.TryParse(r, out tempForParsing));
         }
 
-
+        //This is in here as a place holder for the IPAddress textbox to get rid of an error. 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 

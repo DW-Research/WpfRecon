@@ -31,8 +31,7 @@ namespace WpfRecon
            
         }
 
-      
-        //TODO: Create an error to report an incorrect IP Address to the homePage
+       //TODO: Create an error to report an incorrect IP Address to the homePage
 
         public bool ValidateIPv4(string ipString)
         {
@@ -58,35 +57,37 @@ namespace WpfRecon
 
         }
 
+        //Click to start the live host and the nmap scan if the ping was a success.
         private void Scan_Click(object sender, RoutedEventArgs e)
         {
+            //this is set to true to show generic progress and not a percentage style
             pbStatus.IsIndeterminate = true;
-
+            //start an async
             BackgroundWorker worker = new BackgroundWorker();
             worker.WorkerReportsProgress = true;
             worker.DoWork += worker_DoWork;
-            worker.ProgressChanged += worker_ProgressChanged;
-
+            
+            //output the results of the View model and scan and display them in the output text block
             Output.Text = (MPVM.DisplayOutput(IpAddress.Text));
+
+            //if the live host scan was a success then make the progress bar visable 
             if (State.SuccessfulPing)
                 pbStatus.Visibility = Visibility.Visible;
 
             MPVM.ScanComplete += ScanCompleteHandler;
 
-//            MPVM.LoadNmapScanInBackgroundAsync(() => {});
-
-
             worker.RunWorkerAsync();
-
-           
-            
+                         
         }
-
+        //Automate the nmap scan to run in the background whilst the progress bar is working 
         private void worker_DoWork(object sender, DoWorkEventArgs e)
         {
             MPVM.LoadNmapScanInBackground(() => { });
         }
 
+        //Once the scan has succsessfully completed hide the progress bar and inform the user to check for the full results in the results page 
+
+        //TODO: sleep for 5 seconds and autodirect to to the results page 
         private void ScanCompleteHandler(object sender, EventArgs e)
         {
             this.Dispatcher.Invoke(() => {
@@ -95,7 +96,7 @@ namespace WpfRecon
             });
             
         }
-
+        //Navigation pane section 
         private void Home_Click(object sender, RoutedEventArgs e)
         {
 
@@ -120,23 +121,7 @@ namespace WpfRecon
         }
 
 
-        //private void Run_PBBar(object sender, EventArgs e)
-        //{
-        //    BackgroundWorker worker = new BackgroundWorker();
-        //    worker.WorkerReportsProgress = true;
-        //    worker.DoWork += worker_DoWork;
-        //    worker.ProgressChanged += worker_ProgressChanged;
-
-        //    worker.RunWorkerAsync();
-        //}
-
-
-
-
-        void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-            pbStatus.Value = e.ProgressPercentage;
-        }
+    
     }
 
 }

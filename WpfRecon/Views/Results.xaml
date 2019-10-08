@@ -21,9 +21,9 @@
         <Image gif:ImageBehavior.AnimatedSource="..\Assets\BackGround.gif" x:Name="Gif" Margin="0,0,-36.333,0" Grid.RowSpan="6" VerticalAlignment="Top" Source="..\Assets\BackGround.gif" RenderTransformOrigin="0.5,0.5" Height="800" Stretch="Fill"/>
 
         <Menu x:Name="Menu" HorizontalAlignment="Left" Height="407" VerticalAlignment="Top" Width="151" Background="{x:Null}" Grid.RowSpan="5" Margin="0,96,0,0" Grid.Row="1" >
-            <MenuItem x:Name="Home" Header="Home" Height="72" Width="140.667" Foreground="#FFF7EFEF" FontSize="18" Click="Home_Click"/>
-            <MenuItem x:Name="Results" Header="Results" Height="72" Width="141" Foreground="#FFF7EFEF" FontSize="18"/>
-            <MenuItem x:Name="About" Header="About" Height="72" Width="141" Foreground="#FFF7EFEF" FontSize="18" Click="About_Click"/>
+            <MenuItem x:Name="Home" Header="Home" Height="72" Width="140.667" Foreground= "Aqua" FontSize="18" Click="Home_Click"/>
+            <MenuItem x:Name="Results" Header="Results" Height="72" Width="141" Foreground="Aqua" FontSize="18"/>
+            <MenuItem x:Name="About" Header="About" Height="72" Width="141" Foreground="Aqua" FontSize="18" Click="About_Click"/>
         </Menu>
         <Image  Height="54" Margin="751,10,-104.333,0"  VerticalAlignment="Top" Source="/WpfRecon;component/Assets/hacker-logo-color.png">
             <Image.OpacityMask>

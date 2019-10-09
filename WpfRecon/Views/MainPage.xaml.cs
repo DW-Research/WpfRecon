@@ -59,8 +59,8 @@ namespace WpfRecon
 
         }
 
-        //Click to start the live host and the nmap scan if the ping was a success.
-        private void Scan_Click(object sender, RoutedEventArgs e)
+        //This process runs the live host and the nmap scan if the ping was a success.
+        private void ScanprocessReturn()
         {
             //this is set to true to show generic progress and not a percentage style
             pbStatus.IsIndeterminate = true;
@@ -68,19 +68,38 @@ namespace WpfRecon
             BackgroundWorker worker = new BackgroundWorker();
             worker.WorkerReportsProgress = true;
             worker.DoWork += worker_DoWork;
-            
+
             //output the results of the View model and scan and display them in the output text block
             Output.Text = (MPVM.DisplayOutput(IpAddress.Text));
 
             //if the live host scan was a success then make the progress bar visable 
+            //TODO: Create a pop up informing the user the scan is running
             if (State.SuccessfulPing)
                 pbStatus.Visibility = Visibility.Visible;
 
             MPVM.ScanComplete += ScanCompleteHandler;
 
             worker.RunWorkerAsync();
-                         
         }
+
+        //This is a keyscan on using the enter key to run the scan rather than having to click the button
+        private void RichTextBox_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                ScanprocessReturn();
+
+                e.Handled = true;
+            }
+        }
+      //This is the click button to run the scan 
+        private void Scan_Click(object sender, RoutedEventArgs e)
+        {
+
+            ScanprocessReturn();
+                                 
+        }
+
         //Automate the nmap scan to run in the background whilst the progress bar is working 
         private void worker_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -98,6 +117,7 @@ namespace WpfRecon
             });
             
         }
+
         //Navigation pane section 
         private void Home_Click(object sender, RoutedEventArgs e)
         {
@@ -115,11 +135,9 @@ namespace WpfRecon
 
         private void Results_Click(object sender, RoutedEventArgs e)
         {
-
-            
+                        
             // View The Results page 
             NavigationService.Navigate(new Uri("Views/Results.xaml", UriKind.Relative));
-            
         }
 
 

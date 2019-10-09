@@ -62,9 +62,10 @@ namespace WpfRecon
         //This process runs the live host and the nmap scan if the ping was a success.
         private void ScanprocessReturn()
         {
+           
             //this is set to true to show generic progress and not a percentage style
             pbStatus.IsIndeterminate = true;
-            //start an async
+            //start an async progress bar output
             BackgroundWorker worker = new BackgroundWorker();
             worker.WorkerReportsProgress = true;
             worker.DoWork += worker_DoWork;
@@ -96,8 +97,8 @@ namespace WpfRecon
         private void Scan_Click(object sender, RoutedEventArgs e)
         {
 
-            ScanprocessReturn();
-                                 
+             ScanprocessReturn();
+                     
         }
 
         //Automate the nmap scan to run in the background whilst the progress bar is working 

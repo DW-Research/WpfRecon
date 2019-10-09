@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using WpfRecon.Scans;
 using WpfRecon.Models;
 
+
 namespace WpfRecon.ViewModels
 {
     class MainPageVM

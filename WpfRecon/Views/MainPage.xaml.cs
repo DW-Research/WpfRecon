@@ -62,7 +62,7 @@ namespace WpfRecon
         //This process runs the live host and the nmap scan if the ping was a success.
         private void ScanprocessReturn()
         {
-           
+            
             //this is set to true to show generic progress and not a percentage style
             pbStatus.IsIndeterminate = true;
             //start an async progress bar output
@@ -76,7 +76,11 @@ namespace WpfRecon
             //if the live host scan was a success then make the progress bar visable 
             //TODO: Create a pop up informing the user the scan is running
             if (State.SuccessfulPing)
-                pbStatus.Visibility = Visibility.Visible;
+            //(ASCII ART FOR A BIT OF FUN) the formatting is for the center of the screen as it is a fixed size
+            Output.Text += "\n                                  ########################";
+            Output.Text += "\n                                  ###   SCAN IN PROGRESS   ###";
+            Output.Text += "\n                                  ########################";
+            pbStatus.Visibility = Visibility.Visible;
 
             MPVM.ScanComplete += ScanCompleteHandler;
 
@@ -107,14 +111,13 @@ namespace WpfRecon
             MPVM.LoadNmapScanInBackground(() => { });
         }
 
-        //Once the scan has succsessfully completed hide the progress bar and inform the user to check for the full results in the results page 
-
-        //TODO: sleep for 5 seconds and autodirect to to the results page 
+        //Once the scan has succsessfully completed hide the progress bar and inform the user to check for the full results in the results page         
         private void ScanCompleteHandler(object sender, EventArgs e)
         {
             this.Dispatcher.Invoke(() => {
                 pbStatus.Visibility = Visibility.Hidden;
                 Output.Text += "\nNMap Scan Completed, Check Results Pages for details.";
+                NavigationService.Navigate(new Uri("Views/Results.xaml", UriKind.Relative));
             });
             
         }

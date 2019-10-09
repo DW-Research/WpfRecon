@@ -19,10 +19,10 @@ namespace WpfRecon.Models
         {
 
             //sets if the ping request was a succsess or not
-            string successMessage = PingReply.Status == IPStatus.Success ? "Success" : "Failure";
+            string successMessage = PingReply.Status == IPStatus.Success ? "Target Online" : "Failure";
 
             //IpAddres is provided from the mainpage view
-            return "Ping to: " + IpAdress + "\n"
+            return "Ping to: " + IpAdress + " Complete" + "\n"
                 + "Response delay = " + PingReply.RoundtripTime.ToString() + " ms" + "\n"
                 + "Result: " + successMessage;
         }

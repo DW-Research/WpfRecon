@@ -33,7 +33,7 @@ namespace WpfRecon.Scans
                     // Test popular ports 
                     sb.Append("-F ");
                     //full enumeration scan 
-                    //sb.Append("-sV ");
+                    sb.Append("--script ssh-brute ");
                     sb.Append(IpAddress);
                     //add the arguments to the end of the nmap scan
                     myProcess.StartInfo.Arguments = sb.ToString();

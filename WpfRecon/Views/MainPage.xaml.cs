@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -59,6 +60,8 @@ namespace WpfRecon
 
         }
 
+        //TODO:Fix Error Handeling so that the bar and the responce does not come up when it is not a success
+      
         //This process runs the live host and the nmap scan if the ping was a success.
         private void ScanprocessReturn()
         {
@@ -77,9 +80,13 @@ namespace WpfRecon
             //TODO: Create a pop up informing the user the scan is running
             if (State.SuccessfulPing)
             //(ASCII ART FOR A BIT OF FUN) the formatting is for the center of the screen as it is a fixed size
-            Output.Text += "\n                                  ########################";
-            Output.Text += "\n                                  ###   SCAN IN PROGRESS   ###";
-            Output.Text += "\n                                  ########################";
+            
+            Output.Text += "\n";
+            Output.Text += "\n                                 ##########################";
+            Output.Text += "\n                                 ### FULL SCAN IN PROGRESS ###";
+            Output.Text += "\n                                 ##########################";
+            Output.Text += "\n";
+
             pbStatus.Visibility = Visibility.Visible;
 
             MPVM.ScanComplete += ScanCompleteHandler;

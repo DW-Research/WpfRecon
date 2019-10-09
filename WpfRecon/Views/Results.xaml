@@ -30,8 +30,8 @@
                 <ImageBrush ImageSource="/WpfRecon;component/Assets/hacker-logo-color.png" Stretch="Uniform"/>
             </Image.OpacityMask>
         </Image>
-        <ScrollViewer Margin="109,64,-0.333,0" Grid.RowSpan="6">
-            <TextBlock x:Name="FullResults" HorizontalAlignment="Left" Height="744" Grid.RowSpan="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="789" Foreground="White" Background="#FF14424F" Opacity="0.85"/>
+        <ScrollViewer Margin="144,91,99.667,24" Grid.RowSpan="6">
+            <TextBlock x:Name="FullResults"  TextWrapping="Wrap"  Foreground="White" Background="#FF14424F" Opacity="0.85"/>
         </ScrollViewer>
     </Grid>
 

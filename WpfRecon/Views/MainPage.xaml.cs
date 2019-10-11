@@ -130,7 +130,6 @@ namespace WpfRecon
         //Navigation pane section 
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-
             // View The Home page  
             NavigationService.Navigate(new Uri("Views/MainPage.xaml", UriKind.Relative));
         }
@@ -149,8 +148,15 @@ namespace WpfRecon
             NavigationService.Navigate(new Uri("Views/Results.xaml", UriKind.Relative));
         }
 
+        public void AllPorts_Checked(object sender, RoutedEventArgs e)
+        {
+            
+        }
 
-    
+        private void WholeNetwork_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
 }

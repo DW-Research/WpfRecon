@@ -27,7 +27,8 @@
             <Image gif:ImageBehavior.AnimatedSource="..\Assets\BackGround.gif" x:Name="Gif" Margin="0,0,-36,0" Grid.RowSpan="6" VerticalAlignment="Top" Source="..\Assets\BackGround.gif" RenderTransformOrigin="0.5,0.5" Height="800" Stretch="Fill" Grid.ColumnSpan="3"/>
             <TextBlock x:Name="Output" Height="262.667" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" Foreground="Aqua"  x:FieldModifier="public" Margin="199,194.073,61,0" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="4" Background="#FF14424F" Opacity="0.85"/>
             <ProgressBar Height="16" Margin="235,144.667,0.068,0" VerticalAlignment="Top" BorderBrush="#6637FF0A" Background="#FF06B0B0" Grid.Row="2" Name="pbStatus" IsIndeterminate="False" Visibility="Hidden"/>
-            <TextBox x:Name="IpAddress" PreviewKeyDown="RichTextBox_PreviewKeyDown" BorderThickness="3" HorizontalAlignment="Center" VerticalAlignment="Center" Height="58" Width="255" BorderBrush="#FF12A4A4" Background="Transparent" TextChanged="TextBox_TextChanged" Margin="441,32,203,198" x:FieldModifier="public" MaxLength="18" MaxLines="1" ToolTip="IP Address" Grid.Row="2" FontSize="20" FontFamily="Segoe UI Black" FontWeight="Bold" FontStretch="UltraExpanded" Foreground="#FFFBFFFF" CaretBrush="white" />
+            <TextBlock x:Name="Shadow2" Height="59" VerticalAlignment="Top" Foreground="Aqua" Margin="441,32,203,0" Grid.Row="2" Background="#FF14424F" Opacity="0.85"/>
+            <TextBox x:Name="IpAddress" PreviewKeyDown="RichTextBox_PreviewKeyDown" BorderThickness="3" HorizontalAlignment="Center" VerticalAlignment="Center" Height="58" Width="255" BorderBrush="#FF12A4A4" Background="Transparent" TextChanged="TextBox_TextChanged" Margin="441,32,203,198" x:FieldModifier="public" MaxLength="18" MaxLines="1" ToolTip="IP Address" Grid.Row="2" FontSize="31" FontFamily="Segoe UI Black" FontWeight="Bold" FontStretch="UltraExpanded" Foreground="#FFFBFFFF" CaretBrush="white" />
             <Button x:Name="Scan" HorizontalAlignment="Center" Height="58" VerticalAlignment="Center" Width="59"  BorderThickness="0,0,0,0"   Click="Scan_Click"  Margin="899,31.667,26.401,198.333" Content="Scan" Grid.Row="2" RenderTransformOrigin="0.441,0.253" Grid.ColumnSpan="2">
                 <Button.Background>
                     <ImageBrush ImageSource="..\Assets\NeonButton.png"/>
@@ -43,9 +44,10 @@
                 <MenuItem x:Name="Results" Header="Results" Height="72" Width="141" Foreground="Aqua" FontSize="18" Click="Results_Click"/>
                 <MenuItem x:Name="About" Header="About" Height="72" Width="141" Foreground="Aqua" FontSize="18" Click="About_Click"/>
             </Menu>
-            <CheckBox x:Name="AllPorts" Content="All Ports?"  Foreground="Aqua"  FontSize="18" HorizontalAlignment="Left" Margin="736,31.667,0,0" Grid.Row="2" VerticalAlignment="Top"/>
-            <CheckBox x:Name="WholeNetwork" Content="Whole Network?"  Foreground="Aqua"  FontSize="18" HorizontalAlignment="Left" Margin="735,67.667,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+            <TextBlock x:Name="Shadow" Height="59" VerticalAlignment="Top" Foreground="Aqua" Margin="735,32,10,0" Grid.Row="2" Background="#FF14424F" Opacity="0.85"/>
+            <CheckBox x:Name="AllPorts" Content="All Ports?"  Foreground="Aqua"  FontSize="18" HorizontalAlignment="Left" Margin="736,31.667,0,0" Grid.Row="2" VerticalAlignment="Top" Checked="AllPorts_Checked"/>
+            <CheckBox x:Name="WholeNetwork" Content="Whole Network?"  Foreground="Aqua"  FontSize="18" HorizontalAlignment="Left" Margin="735,67.667,0,0" Grid.Row="2" VerticalAlignment="Top" Checked="WholeNetwork_Checked"/>
         </Grid>
-   
+
     </Grid>
 </Page>

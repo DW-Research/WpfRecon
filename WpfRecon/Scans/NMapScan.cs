@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Threading;
 
+
 namespace WpfRecon.Scans
 {
     public class NMapScan
@@ -34,6 +35,19 @@ namespace WpfRecon.Scans
                     sb.Append("-F ");
                     //full enumeration scan 
                     sb.Append("--script ssh-brute,telnet-brute,ftp-brute, ");
+
+                    //if (AllPorts_Checked.Checked)
+                    //{
+                    //    sb.Append("-p- ");
+                    //}
+
+                    //if (WholeNetwork_Checked.Checked)
+                    //{
+                    //    sb.Append(IpAddress"/24");
+
+                    //}
+                   
+                    //else 
                     sb.Append(IpAddress);
                     //add the arguments to the end of the nmap scan
                     myProcess.StartInfo.Arguments = sb.ToString();

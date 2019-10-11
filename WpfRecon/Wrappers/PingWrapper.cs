@@ -16,7 +16,7 @@ namespace WpfRecon.Wrappers
                 var ping = new Ping();
                 return ping.Send(IpAddress);
             }
-        // TODO: Task Number One - Do not allow words only allow for numbers and a dash
+        
         }
     }
 

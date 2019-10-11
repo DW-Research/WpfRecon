@@ -77,7 +77,7 @@ namespace WpfRecon
             Output.Text = (MPVM.DisplayOutput(IpAddress.Text));
 
             //if the live host scan was a success then make the progress bar visable 
-            //TODO: Create a pop up informing the user the scan is running
+            
             if (State.SuccessfulPing)
             //(ASCII ART FOR A BIT OF FUN) the formatting is for the center of the screen as it is a fixed size
             
@@ -107,9 +107,7 @@ namespace WpfRecon
       //This is the click button to run the scan 
         private void Scan_Click(object sender, RoutedEventArgs e)
         {
-
-             ScanprocessReturn();
-                     
+            ScanprocessReturn();                     
         }
 
         //Automate the nmap scan to run in the background whilst the progress bar is working 

@@ -24,18 +24,23 @@ namespace WpfRecon.Scans
 
                     //TODO: Fix full scan functionality by putting all of the nmap scripts in one location or finding a way to make Nmap locate the rest of the scripts 
 
-                    //this will use the nmap external tool that is stored in the External Tools folder
+                    //This will use the nmap external tool that is stored in the External Tools folder
                     //Running the nmap tool 
                     myProcess.StartInfo.FileName = "ExternalTools//nmap.exe";
                     //Running the options
                     var sb = new StringBuilder();
-                    // Fastest insain mode 
+                    // Fast scan mode 
                     sb.Append("-T5 ");
                     // Test popular ports 
                     sb.Append("-F ");
                     //full enumeration scan 
-                    sb.Append("--script ssh-brute,telnet-brute,ftp-brute, ");
+                    sb.Append("-A ");
+                    //All safe scripts
+                    //sb.Append("-sC ");
+                    
+                    sb.Append("--script ssh-brute,telnet-brute,ftp-brute,smb-os-discovery, ");
 
+                    //TODO: Enable /24 scans and all ports -p- 
                     //if (AllPorts_Checked.Checked)
                     //{
                     //    sb.Append("-p- ");

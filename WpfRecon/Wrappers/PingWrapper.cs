@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using WpfRecon.Interfaces;
 
 namespace WpfRecon.Wrappers
-    //This is the ICMP PingReply rapper that will allow me to conduct Nunit testing.
+    //This is the ICMP PingReply wrapper that will allow me to conduct Nunit testing.
 {
         public class PingWrapper : IPingWrapper
         {

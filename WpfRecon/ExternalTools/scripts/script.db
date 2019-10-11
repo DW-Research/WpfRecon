@@ -111,15 +111,12 @@ Entry { filename = "domcon-cmd.nse", categories = { "auth", "intrusive", } }
 Entry { filename = "domino-enum-users.nse", categories = { "auth", "intrusive", } }
 Entry { filename = "dpap-brute.nse", categories = { "brute", "intrusive", } }
 Entry { filename = "drda-brute.nse", categories = { "brute", "intrusive", } }
-Entry { filename = "drda-info.nse", categories = { "discovery", "safe", "version", } }
 Entry { filename = "duplicates.nse", categories = { "safe", } }
 Entry { filename = "eap-info.nse", categories = { "broadcast", "safe", } }
-Entry { filename = "enip-info.nse", categories = { "discovery", "version", } }
 Entry { filename = "epmd-info.nse", categories = { "default", "discovery", "safe", } }
 Entry { filename = "eppc-enum-processes.nse", categories = { "discovery", "safe", } }
 Entry { filename = "fcrdns.nse", categories = { "discovery", "safe", } }
 Entry { filename = "finger.nse", categories = { "default", "discovery", "safe", } }
-Entry { filename = "fingerprint-strings.nse", categories = { "version", } }
 Entry { filename = "firewalk.nse", categories = { "discovery", "safe", } }
 Entry { filename = "firewall-bypass.nse", categories = { "intrusive", "vuln", } }
 Entry { filename = "flume-master-info.nse", categories = { "default", "discovery", "safe", } }
@@ -412,7 +409,6 @@ Entry { filename = "oracle-brute-stealth.nse", categories = { "brute", "intrusiv
 Entry { filename = "oracle-brute.nse", categories = { "brute", "intrusive", } }
 Entry { filename = "oracle-enum-users.nse", categories = { "auth", "intrusive", } }
 Entry { filename = "oracle-sid-brute.nse", categories = { "brute", "intrusive", } }
-Entry { filename = "oracle-tns-version.nse", categories = { "safe", "version", } }
 Entry { filename = "ovs-agent-version.nse", categories = { "version", } }
 Entry { filename = "p2p-conficker.nse", categories = { "default", "safe", } }
 Entry { filename = "path-mtu.nse", categories = { "discovery", "safe", } }
@@ -454,7 +450,6 @@ Entry { filename = "rsync-list-modules.nse", categories = { "discovery", "safe",
 Entry { filename = "rtsp-methods.nse", categories = { "default", "safe", } }
 Entry { filename = "rtsp-url-brute.nse", categories = { "brute", "intrusive", } }
 Entry { filename = "rusers.nse", categories = { "discovery", "safe", } }
-Entry { filename = "s7-info.nse", categories = { "discovery", "version", } }
 Entry { filename = "samba-vuln-cve-2012-1182.nse", categories = { "intrusive", "vuln", } }
 Entry { filename = "servicetags.nse", categories = { "default", "discovery", "safe", } }
 Entry { filename = "shodan-api.nse", categories = { "discovery", "external", "safe", } }
@@ -557,7 +552,6 @@ Entry { filename = "targets-ipv6-wordlist.nse", categories = { "discovery", } }
 Entry { filename = "targets-sniffer.nse", categories = { "broadcast", "discovery", "safe", } }
 Entry { filename = "targets-traceroute.nse", categories = { "discovery", "safe", } }
 Entry { filename = "targets-xml.nse", categories = { "safe", } }
-Entry { filename = "teamspeak2-version.nse", categories = { "version", } }
 Entry { filename = "telnet-brute.nse", categories = { "brute", "intrusive", } }
 Entry { filename = "telnet-encryption.nse", categories = { "discovery", "safe", } }
 Entry { filename = "telnet-ntlm-info.nse", categories = { "default", "discovery", "safe", } }
@@ -578,7 +572,6 @@ Entry { filename = "url-snarf.nse", categories = { "safe", } }
 Entry { filename = "ventrilo-info.nse", categories = { "default", "discovery", "safe", "version", } }
 Entry { filename = "versant-info.nse", categories = { "discovery", "safe", } }
 Entry { filename = "vmauthd-brute.nse", categories = { "brute", "intrusive", } }
-Entry { filename = "vmware-version.nse", categories = { "discovery", "safe", "version", } }
 Entry { filename = "vnc-brute.nse", categories = { "brute", "intrusive", } }
 Entry { filename = "vnc-info.nse", categories = { "default", "discovery", "safe", } }
 Entry { filename = "vnc-title.nse", categories = { "discovery", "intrusive", } }

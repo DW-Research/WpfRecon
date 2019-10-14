@@ -38,21 +38,24 @@ namespace WpfRecon.Scans
                     //All safe scripts
                     //sb.Append("-sC ");
                     
+                    //smb enumeration as this port has a poor security track record.
+                    //Brute force SSH, Telnet, FTP
                     sb.Append("--script ssh-brute,telnet-brute,ftp-brute,smb-os-discovery, ");
 
-                    //TODO: Enable /24 scans and all ports -p- 
+                    //TODO:  Enable all ports -p- 
                     //if (AllPorts_Checked.Checked)
                     //{
                     //    sb.Append("-p- ");
                     //}
 
+                    //TODO: Enable /24 scans
                     //if (WholeNetwork_Checked.Checked)
                     //{
                     //    sb.Append(IpAddress"/24");
 
                     //}
-                   
-                    //else 
+
+                     
                     sb.Append(IpAddress);
                     //add the arguments to the end of the nmap scan
                     myProcess.StartInfo.Arguments = sb.ToString();
@@ -72,7 +75,7 @@ namespace WpfRecon.Scans
                         stdOutSb.Append(myProcess.StandardOutput.ReadToEnd());
                         stdOutSb.Append(myProcess.StandardError.ReadToEnd());
                     }
-                                     
+                                  
 
                     return stdOutSb.ToString();
                 }

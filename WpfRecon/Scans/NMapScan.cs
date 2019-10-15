@@ -31,31 +31,31 @@ namespace WpfRecon.Scans
                     var sb = new StringBuilder();
                     // Fast scan mode 
                     sb.Append("-T5 ");
-                    // Test popular ports 
-                    sb.Append("-F ");
-                    //full enumeration scan 
-                    sb.Append("-A ");
-                    //All safe scripts
-                    //sb.Append("-sC ");
-                    
-                    //smb enumeration as this port has a poor security track record.
-                    //Brute force SSH, Telnet, FTP
-                    sb.Append("--script ssh-brute,telnet-brute,ftp-brute,smb-os-discovery, ");
+                                                                               
+                    if (MainPage.AP == true)
+                    {
+                        sb.Append("-p- ");
+                      
+                    }
+                    else
+                    {
+                        //full enumeration scan 
+                        sb.Append("-A ");
+                        //smb enumeration as this port has a poor security track record.
+                        //Brute force SSH, Telnet, FTP
+                        sb.Append("--script ssh-brute,telnet-brute,ftp-brute,smb-os-discovery, ");
 
-                    //TODO:  Enable all ports -p- 
-                    //if (AllPorts_Checked.Checked)
-                    //{
-                    //    sb.Append("-p- ");
-                    //}
-
+                        // Test popular ports 
+                        sb.Append("-F ");
+                    }
                     //TODO: Enable /24 scans
-                    //if (WholeNetwork_Checked.Checked)
-                    //{
-                    //    sb.Append(IpAddress"/24");
+                    if (MainPage.WN == true)
+                    {
+                        sb.Append(IpAddress + "/24");
 
-                    //}
+                    }
 
-                     
+
                     sb.Append(IpAddress);
                     //add the arguments to the end of the nmap scan
                     myProcess.StartInfo.Arguments = sb.ToString();

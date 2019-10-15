@@ -26,10 +26,13 @@ namespace WpfRecon
     public partial class MainPage : Page
     {
         MainPageVM MPVM = new MainPageVM();
+        public static bool AP = false;
+        public static bool WN = false;
+
         public MainPage()
         {
             InitializeComponent();
-           
+            
         }
 
        //TODO: Create an error to report an incorrect IP Address to the homePage
@@ -65,7 +68,8 @@ namespace WpfRecon
         //This process runs the live host and the nmap scan if the ping was a success.
         private void ScanprocessReturn()
         {
-            
+            AP = AllPorts.IsChecked.Value;
+            WN = WholeNetwork.IsChecked.Value; 
             //this is set to true to show generic progress and not a percentage style
             pbStatus.IsIndeterminate = true;
             //start an async progress bar output
@@ -75,20 +79,21 @@ namespace WpfRecon
 
             //output the results of the View model and scan and display them in the output text block
             Output.Text = (MPVM.DisplayOutput(IpAddress.Text));
+            
 
             //if the live host scan was a success then make the progress bar visable 
-            
+
             if (State.SuccessfulPing)
-            //(ASCII ART FOR A BIT OF FUN) the formatting is for the center of the screen as it is a fixed size
-            
-            Output.Text += "\n";
-            Output.Text += "\n                                 ##########################";
-            Output.Text += "\n                                 ### FULL SCAN IN PROGRESS ###";
-            Output.Text += "\n                                 ##########################";
-            Output.Text += "\n";
+            { //(ASCII ART FOR A BIT OF FUN) the formatting is for the center of the screen as it is a fixed size
 
-            pbStatus.Visibility = Visibility.Visible;
+                Output.Text += "\n";
+                Output.Text += "\n                                 ##########################";
+                Output.Text += "\n                                 ### FULL SCAN IN PROGRESS ###";
+                Output.Text += "\n                                 ##########################";
+                Output.Text += "\n";
 
+                pbStatus.Visibility = Visibility.Visible;
+            }
             MPVM.ScanComplete += ScanCompleteHandler;
 
             worker.RunWorkerAsync();
@@ -121,6 +126,7 @@ namespace WpfRecon
         {
             this.Dispatcher.Invoke(() => {
                 pbStatus.Visibility = Visibility.Hidden;
+                //In case redirect is lagging an error come up informing the user to click results
                 Output.Text += "\nNMap Scan Completed, Check Results Pages for details.";
                 NavigationService.Navigate(new Uri("Views/Results.xaml", UriKind.Relative));
             });
@@ -148,6 +154,7 @@ namespace WpfRecon
             NavigationService.Navigate(new Uri("Views/Results.xaml", UriKind.Relative));
         }
 
+
         public void AllPorts_Checked(object sender, RoutedEventArgs e)
         {
             
@@ -155,7 +162,7 @@ namespace WpfRecon
 
         private void WholeNetwork_Checked(object sender, RoutedEventArgs e)
         {
-
+            
         }
     }
 

@@ -63,12 +63,13 @@ namespace WpfRecon
 
         }
 
-        //TODO:Fix Error Handeling so that the bar and the responce does not come up when it is not a success
-      
         //This process runs the live host and the nmap scan if the ping was a success.
         private void ScanprocessReturn()
         {
+            //this variable is called from the nmap scan to run a scan on all 65535 ports 
             AP = AllPorts.IsChecked.Value;
+
+            //this variable is called from the nmap scan to run a nmap scan on all devices on a class C network
             WN = WholeNetwork.IsChecked.Value; 
             //this is set to true to show generic progress and not a percentage style
             pbStatus.IsIndeterminate = true;
@@ -92,8 +93,10 @@ namespace WpfRecon
                 Output.Text += "\n                                 ##########################";
                 Output.Text += "\n";
 
+                // show status bar when scan is running 
                 pbStatus.Visibility = Visibility.Visible;
             }
+            
             MPVM.ScanComplete += ScanCompleteHandler;
 
             worker.RunWorkerAsync();
@@ -154,12 +157,13 @@ namespace WpfRecon
             NavigationService.Navigate(new Uri("Views/Results.xaml", UriKind.Relative));
         }
 
-
+        //this is the check box on the xaml that gets called from the variable AP from the nmap scan
         public void AllPorts_Checked(object sender, RoutedEventArgs e)
         {
             
         }
 
+        //this is the chack box that gets called from the WN variable from the Nmap Scan 
         private void WholeNetwork_Checked(object sender, RoutedEventArgs e)
         {
             

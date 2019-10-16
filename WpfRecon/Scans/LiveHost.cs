@@ -30,6 +30,7 @@ namespace WpfRecon.Scans
 
             // create a state that is then sent to the Nmap scan if succsessfull 
             State.SuccessfulPing = result.PingReply.Status == IPStatus.Success;
+
             State.IPAddress = result.IpAdress;
 
             return result;

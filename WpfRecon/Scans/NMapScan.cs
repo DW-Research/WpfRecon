@@ -22,7 +22,6 @@ namespace WpfRecon.Scans
                 {
                     myProcess.StartInfo.UseShellExecute = false;
 
-                    //TODO: Fix full scan functionality by putting all of the nmap scripts in one location or finding a way to make Nmap locate the rest of the scripts 
 
                     //This will use the nmap external tool that is stored in the External Tools folder
                     //Running the nmap tool 
@@ -30,14 +29,16 @@ namespace WpfRecon.Scans
                     //Running the options
                     var sb = new StringBuilder();
                     // Fast scan mode 
-                    sb.Append("-T5 ");
-                                                                               
+                    sb.Append("-T4 ");
+                    
+                    //if the mainpage All Ports checkbox was checked then it will run a all ports -p- argument
+                    //TODO: Get the all ports not to time out
                     if (MainPage.AP == true)
                     {
                         sb.Append("-p- ");
                       
                     }
-                    else
+                    else //if not checked then it will run a full enumeration scan on the target
                     {
                         //full enumeration scan 
                         sb.Append("-A ");
@@ -48,15 +49,17 @@ namespace WpfRecon.Scans
                         // Test popular ports 
                         sb.Append("-F ");
                     }
-                    //TODO: Enable /24 scans
+                    //if the Whole Network check box was ticked the scanner will scan a whole class C network.
                     if (MainPage.WN == true)
                     {
-                        sb.Append(IpAddress + "/24");
+                        sb.Append(IpAddress + "/24 ");
 
                     }
-
-
-                    sb.Append(IpAddress);
+                    //if not selected it will just target the IP Adress provided
+                    else
+                    {
+                        sb.Append(IpAddress);
+                    }
                     //add the arguments to the end of the nmap scan
                     myProcess.StartInfo.Arguments = sb.ToString();
                     //hide the window to avoid a popup

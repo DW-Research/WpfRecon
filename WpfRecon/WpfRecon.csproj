@@ -82,6 +82,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Scans\LocalScan.cs" />
     <Compile Include="Scans\NMapScan.cs" />
     <Compile Include="State.cs" />
     <Compile Include="ViewModels\MainPageVM.cs" />

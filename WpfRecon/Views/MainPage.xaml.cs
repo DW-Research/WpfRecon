@@ -32,11 +32,11 @@ namespace WpfRecon
         public MainPage()
         {
             InitializeComponent();
-            
+
         }
 
-       //TODO: Create an error to report an incorrect IP Address to the homePage
-       //This is a input validation field 
+        //TODO: Create an error to report an incorrect IP Address to the homePage
+        //This is a input validation field 
 
         public bool ValidateIPv4(string ipString)
         {
@@ -70,7 +70,7 @@ namespace WpfRecon
             AP = AllPorts.IsChecked.Value;
 
             //this variable is called from the nmap scan to run a nmap scan on all devices on a class C network
-            WN = WholeNetwork.IsChecked.Value; 
+            WN = WholeNetwork.IsChecked.Value;
             //this is set to true to show generic progress and not a percentage style
             pbStatus.IsIndeterminate = true;
             //start an async progress bar output
@@ -80,7 +80,7 @@ namespace WpfRecon
 
             //output the results of the View model and scan and display them in the output text block
             Output.Text = (MPVM.DisplayOutput(IpAddress.Text));
-            
+
 
             //if the live host scan was a success then make the progress bar visable 
 
@@ -96,7 +96,7 @@ namespace WpfRecon
                 // show status bar when scan is running 
                 pbStatus.Visibility = Visibility.Visible;
             }
-            
+
             MPVM.ScanComplete += ScanCompleteHandler;
 
             worker.RunWorkerAsync();
@@ -112,10 +112,10 @@ namespace WpfRecon
                 e.Handled = true;
             }
         }
-      //This is the click button to run the scan 
+        //This is the click button to run the scan 
         private void Scan_Click(object sender, RoutedEventArgs e)
         {
-            ScanprocessReturn();                     
+            ScanprocessReturn();
         }
 
         //Automate the nmap scan to run in the background whilst the progress bar is working 
@@ -133,7 +133,7 @@ namespace WpfRecon
                 Output.Text += "\nNMap Scan Completed, Check Results Pages for details.";
                 NavigationService.Navigate(new Uri("Views/Results.xaml", UriKind.Relative));
             });
-            
+
         }
 
         //Navigation pane section 
@@ -152,7 +152,7 @@ namespace WpfRecon
 
         private void Results_Click(object sender, RoutedEventArgs e)
         {
-                        
+
             // View The Results page 
             NavigationService.Navigate(new Uri("Views/Results.xaml", UriKind.Relative));
         }
@@ -160,14 +160,35 @@ namespace WpfRecon
         //this is the check box on the xaml that gets called from the variable AP from the nmap scan
         public void AllPorts_Checked(object sender, RoutedEventArgs e)
         {
-            
+
         }
 
         //this is the chack box that gets called from the WN variable from the Nmap Scan 
         private void WholeNetwork_Checked(object sender, RoutedEventArgs e)
         {
-            
+
+        }
+
+
+
+        private void LocalNetwork_Checked_1(object sender, RoutedEventArgs e)
+        {
+            if (LocalNetwork.checked == true)
+              {
+                    IpAddress.Visibility = System.Windows.Visibility.Hidden;
+                }
+
+
+                else
+                {
+                    IpAddress.Visibility = System.Windows.Visibility.Visible;
+
+                }
+
+
+
+                }
         }
     }
-
 }
+

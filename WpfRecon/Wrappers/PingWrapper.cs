@@ -16,7 +16,7 @@ namespace WpfRecon.Wrappers
                 var ping = new Ping();
                 return ping.Send(IpAddress);
             }
-        
+           
         }
     }
 

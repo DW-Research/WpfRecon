@@ -32,7 +32,7 @@ namespace WpfRecon.Scans
                     sb.Append("-T4 ");
                     
                     //if the mainpage All Ports checkbox was checked then it will run a all ports -p- argument
-                    //TODO: Get the all ports not to time out
+                    
                     if (MainPage.AP == true)
                     {
                         sb.Append("-p- ");

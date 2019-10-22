@@ -18,6 +18,7 @@ using System.Windows.Shapes;
 using WpfRecon.Models;
 using WpfRecon.ViewModels;
 
+
 namespace WpfRecon
 {
     /// <summary>
@@ -25,9 +26,11 @@ namespace WpfRecon
     /// </summary>
     public partial class MainPage : Page
     {
+        public const bool V = false;
         MainPageVM MPVM = new MainPageVM();
         public static bool AP = false;
         public static bool WN = false;
+        CheckValidation validation = new CheckValidation();
 
         public MainPage()
         {
@@ -35,37 +38,23 @@ namespace WpfRecon
 
         }
 
-        //TODO: Create an error to report an incorrect IP Address to the homePage
-        //This is a input validation field 
+        
 
-        public bool ValidateIPv4(string ipString)
-        {
-            //if it is blank throw an error
-            if (String.IsNullOrWhiteSpace(ipString))
-            {
-                return false;
-            }
-            // is is in the correct format if not error
-            string[] splitValues = ipString.Split('.');
-            if (splitValues.Length != 4)
-            {
-                return false;
-            }
-
-            byte tempForParsing;
-
-            return splitValues.All(r => byte.TryParse(r, out tempForParsing));
-        }
+        
 
         //This is in here as a place holder for the IPAddress textbox to get rid of an error. 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+            //TODO: Create an error to report an incorrect or null IP Address to the homePage
+            //This is a input validation field 
 
         }
 
         //This process runs the live host and the nmap scan if the ping was a success.
         private void ScanprocessReturn()
         {
+
+
             //this variable is called from the nmap scan to run a scan on all 65535 ports 
             AP = AllPorts.IsChecked.Value;
 
@@ -115,6 +104,7 @@ namespace WpfRecon
         //This is the click button to run the scan 
         private void Scan_Click(object sender, RoutedEventArgs e)
         {
+             
             ScanprocessReturn();
         }
 
@@ -170,24 +160,20 @@ namespace WpfRecon
         }
 
 
-
+        //this is the checkbox for conducting a local scan that will blank out the IP Address textbox
         private void LocalNetwork_Checked_1(object sender, RoutedEventArgs e)
         {
-            if (LocalNetwork.checked == true)
-              {
-                    IpAddress.Visibility = System.Windows.Visibility.Hidden;
-                }
 
-
-                else
-                {
-                    IpAddress.Visibility = System.Windows.Visibility.Visible;
-
-                }
-
-
-
-                }
+            if (LocalNetwork.IsChecked == true)
+            {
+                
+                IpAddress.Text = String.Empty;
+                IpAddress.Visibility = System.Windows.Visibility.Hidden;
+            }
+            else
+            {
+                IpAddress.Visibility = System.Windows.Visibility.Visible;
+            }
         }
     }
 }

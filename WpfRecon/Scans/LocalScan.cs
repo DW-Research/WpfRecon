@@ -15,7 +15,9 @@ namespace WpfRecon.Scans
 
             // Get the IP
             string myIP = Dns.GetHostEntry(hostName).AddressList[0].ToString();
-            
+
+            //TODO: Get the local scan working with myIP and not just IpAddress
+
         }
     }
 }

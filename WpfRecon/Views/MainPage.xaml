@@ -47,7 +47,7 @@
             <TextBlock x:Name="Shadow" Height="97" VerticalAlignment="Top" Foreground="Aqua" Margin="735,10,10,0" Grid.Row="2" Background="#FF14424F" Opacity="0.85"/>
             <CheckBox x:Name="AllPorts" Content="All Ports?" x:FieldModifier="public" Foreground="Aqua"  FontSize="18" HorizontalAlignment="Left" Margin="736,14,0,0" Grid.Row="2" VerticalAlignment="Top" Checked="AllPorts_Checked"/>
             <CheckBox x:Name="WholeNetwork" Content="Whole Network?" x:FieldModifier="public" Foreground="Aqua"  FontSize="18" HorizontalAlignment="Left" Margin="735,82,0,0" Grid.Row="2" VerticalAlignment="Top" Checked="WholeNetwork_Checked"/>
-            <CheckBox x:Name="LocalNetwork" Content="Local Network?" x:FieldModifier="public" Foreground="Aqua"  FontSize="18" HorizontalAlignment="Left" Margin="735,50,0,0" Grid.Row="2" VerticalAlignment="Top" Checked="LocalNetwork_Checked_1" /> 
+            <CheckBox x:Name="LocalNetwork" Content="Local Network?" x:FieldModifier="public" Foreground="Aqua"  FontSize="18" HorizontalAlignment="Left" Margin="735,50,0,0" Grid.Row="2" VerticalAlignment="Top" Checked="LocalNetwork_Checked_1" Unchecked="LocalNetwork_Checked_1"/> 
         </Grid>
 
     </Grid>

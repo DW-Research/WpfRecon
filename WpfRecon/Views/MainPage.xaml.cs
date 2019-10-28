@@ -55,9 +55,10 @@ namespace WpfRecon
         //This process runs the live host and the nmap scan if the ping was a success.
         private void ScanprocessReturn()
         {
+            //Error checking to make sure the IP Address is in the correct format
             if (CheckValidation.IsValidateIP(IpAddress.Text) != "True")
             {
-                Output.Text = "This IP is not in the correct format!";
+                Output.Text = "This IP Address is not in the correct format!  Correct example 127.0.0.1";
             }
             else
             {
@@ -112,8 +113,7 @@ namespace WpfRecon
         //This is the click button to run the scan 
         private void Scan_Click(object sender, RoutedEventArgs e)
         {
-             
-            ScanprocessReturn();
+           ScanprocessReturn();
         }
 
         //Automate the nmap scan to run in the background whilst the progress bar is working 

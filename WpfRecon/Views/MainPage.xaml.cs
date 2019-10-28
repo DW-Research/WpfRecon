@@ -27,10 +27,15 @@ namespace WpfRecon
     public partial class MainPage : Page
     {
         public const bool V = false;
+
+        //Main page view model 
         MainPageVM MPVM = new MainPageVM();
+
+        //All parts are checked scan defimed in the nmap scan 
         public static bool AP = false;
+        //A whole network scan defined in the nmap scan
         public static bool WN = false;
-        CheckValidation validation = new CheckValidation();
+        
 
         public MainPage()
         {
@@ -39,9 +44,6 @@ namespace WpfRecon
         }
 
         
-
-        
-
         //This is in here as a place holder for the IPAddress textbox to get rid of an error. 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -53,42 +55,48 @@ namespace WpfRecon
         //This process runs the live host and the nmap scan if the ping was a success.
         private void ScanprocessReturn()
         {
-
-
-            //this variable is called from the nmap scan to run a scan on all 65535 ports 
-            AP = AllPorts.IsChecked.Value;
-
-            //this variable is called from the nmap scan to run a nmap scan on all devices on a class C network
-            WN = WholeNetwork.IsChecked.Value;
-            //this is set to true to show generic progress and not a percentage style
-            pbStatus.IsIndeterminate = true;
-            //start an async progress bar output
-            BackgroundWorker worker = new BackgroundWorker();
-            worker.WorkerReportsProgress = true;
-            worker.DoWork += worker_DoWork;
-
-            //output the results of the View model and scan and display them in the output text block
-            Output.Text = (MPVM.DisplayOutput(IpAddress.Text));
-
-
-            //if the live host scan was a success then make the progress bar visable 
-
-            if (State.SuccessfulPing)
-            { //(ASCII ART FOR A BIT OF FUN) the formatting is for the center of the screen as it is a fixed size
-
-                Output.Text += "\n";
-                Output.Text += "\n                                 ##########################";
-                Output.Text += "\n                                 ### FULL SCAN IN PROGRESS ###";
-                Output.Text += "\n                                 ##########################";
-                Output.Text += "\n";
-
-                // show status bar when scan is running 
-                pbStatus.Visibility = Visibility.Visible;
+            if (CheckValidation.IsValidateIP(IpAddress.Text) != "True")
+            {
+                Output.Text = "This IP is not in the correct format!";
             }
+            else
+            {
 
-            MPVM.ScanComplete += ScanCompleteHandler;
+                //this variable is called from the nmap scan to run a scan on all 65535 ports 
+                AP = AllPorts.IsChecked.Value;
 
-            worker.RunWorkerAsync();
+                //this variable is called from the nmap scan to run a nmap scan on all devices on a class C network
+                WN = WholeNetwork.IsChecked.Value;
+                //this is set to true to show generic progress and not a percentage style
+                pbStatus.IsIndeterminate = true;
+                //start an async progress bar output
+                BackgroundWorker worker = new BackgroundWorker();
+                worker.WorkerReportsProgress = true;
+                worker.DoWork += worker_DoWork;
+
+                //output the results of the View model and scan and display them in the output text block
+                Output.Text = (MPVM.DisplayOutput(IpAddress.Text));
+
+
+                //if the live host scan was a success then make the progress bar visable 
+
+                if (State.SuccessfulPing)
+                { //(ASCII ART FOR A BIT OF FUN) the formatting is for the center of the screen as it is a fixed size
+
+                    Output.Text += "\n";
+                    Output.Text += "\n                                 ##########################";
+                    Output.Text += "\n                                 ### FULL SCAN IN PROGRESS ###";
+                    Output.Text += "\n                                 ##########################";
+                    Output.Text += "\n";
+
+                    // show status bar when scan is running 
+                    pbStatus.Visibility = Visibility.Visible;
+                }
+
+                MPVM.ScanComplete += ScanCompleteHandler;
+
+                worker.RunWorkerAsync();
+            }
         }
 
         //This is a keyscan on using the enter key to run the scan rather than having to click the button

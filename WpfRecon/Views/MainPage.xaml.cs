@@ -58,13 +58,12 @@ namespace WpfRecon
         {
             //Error checking to make sure the IP Address is in the correct format
 
-            if (LocalNetwork.IsChecked == false)
+            if( (LocalNetwork.IsChecked == false) && (CheckValidation.IsValidateIP(IpAddress.Text) != "True"))
             {
-                if (CheckValidation.IsValidateIP(IpAddress.Text) != "True")
-                Output.Text = "This IP Address is not in the correct format!  Correct example 127.0.0.1";
+                    Output.Text = "This IP Address is not in the correct format!  Correct example 127.0.0.1";
             }
-          
-                
+            else
+            {
 
                 //this variable is called from the nmap scan to run a scan on all 65535 ports 
                 AP = AllPorts.IsChecked.Value;
@@ -100,6 +99,7 @@ namespace WpfRecon
                 MPVM.ScanComplete += ScanCompleteHandler;
 
                 worker.RunWorkerAsync();
+            }
             }
         
 

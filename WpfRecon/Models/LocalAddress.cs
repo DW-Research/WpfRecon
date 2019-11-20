@@ -11,12 +11,10 @@ namespace WpfRecon.Models
     {
         public static string GetLocalAddress()
         {
-            string IPAddress = Dns.GetHostName(); // Retrive the Name of HOST  
-
-            // Get the IP
-            string myIP = Dns.GetHostEntry(IPAddress).AddressList[0].ToString();
-
-            return myIP;
+            string strHostName = System.Net.Dns.GetHostName();
+            IPHostEntry ipEntry = System.Net.Dns.GetHostEntry(strHostName);
+            IPAddress[] addr = ipEntry.AddressList;
+            return addr[addr.Length - 1].ToString(); ;
         }
     }
 }

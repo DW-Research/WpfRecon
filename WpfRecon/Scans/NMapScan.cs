@@ -67,10 +67,10 @@ namespace WpfRecon.Scans
                     myProcess.StartInfo.RedirectStandardOutput = true;
                     myProcess.StartInfo.RedirectStandardError = true;
 
-                    // myProcess.StartInfo.CreateNoWindow = true;
+                 
                     
                     await Task.Run(() => myProcess.Start());
-                    //myProcess.Start();
+                    
                     
                     var stdOutSb = new StringBuilder();
                     while (!myProcess.HasExited)
@@ -91,7 +91,5 @@ namespace WpfRecon.Scans
         }
     }
 
-    public class NmapEventHandler
-    {
-    }
+    
 }

@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using WpfRecon.Scans;
+using WpfRecon.Models;
 using System;
 using System.Windows.Navigation;
 using System.Windows.Input;

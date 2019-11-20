@@ -10,7 +10,7 @@ using WpfRecon.Models;
 using WpfRecon.Wrappers;
 using WpfRecon.Interfaces;
 
-namespace WpfRecon.Scans
+namespace WpfRecon.Models
 {
     public class LiveHost
     {

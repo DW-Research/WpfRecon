@@ -35,6 +35,8 @@ namespace WpfRecon
         public static bool AP = false;
         //A whole network scan defined in the nmap scan
         public static bool WN = false;
+        //local scan defined in the nM
+        public static bool LOC = false;
         
 
         public MainPage()
@@ -44,11 +46,10 @@ namespace WpfRecon
         }
 
         
-        //This is in here as a place holder for the IPAddress textbox to get rid of an error. 
+        //This is in here as a place holder for the IPAddress textbox. 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //TODO: Create an error to report an incorrect or null IP Address to the homePage
-            //This is a input validation field 
+             
 
         }
 
@@ -56,12 +57,14 @@ namespace WpfRecon
         private void ScanprocessReturn()
         {
             //Error checking to make sure the IP Address is in the correct format
-            if (CheckValidation.IsValidateIP(IpAddress.Text) != "True")
+
+            if (LocalNetwork.IsChecked == false)
             {
+                if (CheckValidation.IsValidateIP(IpAddress.Text) != "True")
                 Output.Text = "This IP Address is not in the correct format!  Correct example 127.0.0.1";
             }
-            else
-            {
+          
+                
 
                 //this variable is called from the nmap scan to run a scan on all 65535 ports 
                 AP = AllPorts.IsChecked.Value;
@@ -98,7 +101,7 @@ namespace WpfRecon
 
                 worker.RunWorkerAsync();
             }
-        }
+        
 
         //This is a keyscan on using the enter key to run the scan rather than having to click the button
         private void RichTextBox_PreviewKeyDown(object sender, KeyEventArgs e)
@@ -174,12 +177,14 @@ namespace WpfRecon
 
             if (LocalNetwork.IsChecked == true)
             {
-                
+                //Clears any input the user entered before the local scan was started. 
                 IpAddress.Text = String.Empty;
+                //Hides the IP Address field so the user cant enter an IP Adress (Human error)
                 IpAddress.Visibility = System.Windows.Visibility.Hidden;
             }
             else
             {
+                //Make the field visable for use.
                 IpAddress.Visibility = System.Windows.Visibility.Visible;
             }
         }

@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Threading;
+using WpfRecon.Models;
 
-
-namespace WpfRecon.Scans
+namespace WpfRecon.Models
 {
     public class NMapScan
     {
@@ -17,6 +17,7 @@ namespace WpfRecon.Scans
         {
             try
             {
+                LocalAddress localAddress = new LocalAddress();
                
                 using (Process myProcess = new Process())
                 {
@@ -54,6 +55,10 @@ namespace WpfRecon.Scans
                     {
                         sb.Append(IpAddress + "/24 ");
 
+                    }
+                    if (MainPage.LOC == true)
+                    {
+                        sb.Append(localAddress + "/24");
                     }
                     //if not selected it will just target the IP Adress provided
                     else

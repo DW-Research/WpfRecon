@@ -14,8 +14,7 @@ namespace WpfRecon.Wrappers
     {
         public PingReply Send(string IpAddress)
         {
-            
-            string LocalAdd = LocalAddress.GetLocalAddress();
+           
             try
             {
                 var ping = new Ping();
@@ -24,9 +23,16 @@ namespace WpfRecon.Wrappers
             }
             catch
             {
+                IpAddress = GetLocalIPaddress();
                 var ping = new Ping();
-                return ping.Send(LocalAdd);
+                return ping.Send(IpAddress);
             }
+        }
+        public static string GetLocalIPaddress()
+        {
+           
+            string LocalAdd = LocalAddress.GetLocalAddress();
+            return LocalAdd;
         }
     }
 }

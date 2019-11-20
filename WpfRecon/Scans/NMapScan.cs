@@ -68,7 +68,7 @@ namespace WpfRecon.Models
                     //add the arguments to the end of the nmap scan
                     myProcess.StartInfo.Arguments = sb.ToString();
                     //hide the window to avoid a popup
-                    myProcess.StartInfo.CreateNoWindow = true;
+                    //myProcess.StartInfo.CreateNoWindow = true;
                     myProcess.StartInfo.RedirectStandardOutput = true;
                     myProcess.StartInfo.RedirectStandardError = true;
 

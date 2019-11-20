@@ -21,6 +21,13 @@ namespace WpfRecon.Models
             //Use the ping wrapper that is the NetworkInformation class 
             PingWrapper ping = new PingWrapper();
 
+            if(IpAddress == "")
+            {
+                IpAddress = PingWrapper.GetLocalIPaddress();
+                
+            }
+            else
+                    { }
             // create a result of sending a ping to remote device by using the IpAddress that has been provided from the main page view 
             ScanResult result = new ScanResult
             {

@@ -34,7 +34,7 @@ namespace WpfRecon.Models
                     
                     //if the mainpage All Ports checkbox was checked then it will run a all ports -p- argument
                     
-                    if (MainPage.AP == true)
+                    if (MainPage.AllPortCheck == true)
                     {
                         sb.Append("-p- ");
                       
@@ -51,14 +51,16 @@ namespace WpfRecon.Models
                         sb.Append("-F ");
                     }
                     //if the Whole Network check box was ticked the scanner will scan a whole class C network.
-                    if (MainPage.WN == true)
+                    if (MainPage.WholeNetworkCheck == true)
                     {
                         sb.Append(IpAddress + "/24 ");
 
                     }
-                    if (MainPage.LOC == true)
+
+                    //TODO: This seems to be allways true when the box is NOT selected.  This needs to be fixed as a priority. Look at if Else logic
+                    if (MainPage.LocalNetworkCheck == true)
                     {
-                        sb.Append(localAddress + "/24");
+                        sb.Append(IpAddress + "/24");
                     }
                     //if not selected it will just target the IP Adress provided
                     else
@@ -68,7 +70,7 @@ namespace WpfRecon.Models
                     //add the arguments to the end of the nmap scan
                     myProcess.StartInfo.Arguments = sb.ToString();
                     //hide the window to avoid a popup
-                    //myProcess.StartInfo.CreateNoWindow = true;
+                    myProcess.StartInfo.CreateNoWindow = true;
                     myProcess.StartInfo.RedirectStandardOutput = true;
                     myProcess.StartInfo.RedirectStandardError = true;
 

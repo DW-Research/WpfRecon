@@ -30,9 +30,10 @@ namespace WpfRecon
             NavigationService.Navigate(new Uri("Views/About.xaml", UriKind.Relative));
         }
 
+        //TODO:this link isnt working
         private void Results_Click(object sender, RoutedEventArgs e)
         {
-                        
+
             // View The Results page 
             NavigationService.Navigate(new Uri("Views/Results.xaml", UriKind.Relative));
         }

@@ -32,11 +32,11 @@ namespace WpfRecon
         MainPageVM MPVM = new MainPageVM();
 
         //All parts are checked scan defimed in the nmap scan 
-        public static bool AP = false;
+        public static bool AllPortCheck = false;
         //A whole network scan defined in the nmap scan
-        public static bool WN = false;
+        public static bool WholeNetworkCheck = false;
         //local scan defined in the nM
-        public static bool LOC = false;
+        public static bool LocalNetworkCheck = false;
         
 
         public MainPage()
@@ -66,10 +66,10 @@ namespace WpfRecon
             {
 
                 //this variable is called from the nmap scan to run a scan on all 65535 ports 
-                AP = AllPorts.IsChecked.Value;
+                AllPortCheck = AllPorts.IsChecked.Value;
 
                 //this variable is called from the nmap scan to run a nmap scan on all devices on a class C network
-                WN = WholeNetwork.IsChecked.Value;
+                WholeNetworkCheck = WholeNetwork.IsChecked.Value;
                 //this is set to true to show generic progress and not a percentage style
                 pbStatus.IsIndeterminate = true;
                 //start an async progress bar output
@@ -181,6 +181,7 @@ namespace WpfRecon
                 IpAddress.Text = String.Empty;
                 //Hides the IP Address field so the user cant enter an IP Adress (Human error)
                 IpAddress.Visibility = System.Windows.Visibility.Hidden;
+                LocalNetworkCheck = true;
             }
             else
             {

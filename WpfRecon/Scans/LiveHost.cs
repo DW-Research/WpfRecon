@@ -1,14 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Net.NetworkInformation;
-using WpfRecon;
-using System.Windows;
-using WpfRecon.Models;
+﻿using System.Net.NetworkInformation;
 using WpfRecon.Wrappers;
-using WpfRecon.Interfaces;
 
 namespace WpfRecon.Models
 {

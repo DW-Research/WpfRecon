@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿using System.Text.RegularExpressions;
 
 namespace WpfRecon.Models
 {
     public class CheckValidation
     {
-
-      
 
         internal static string IsValidateIP(string Address)
             {

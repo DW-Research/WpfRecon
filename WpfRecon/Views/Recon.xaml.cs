@@ -8,11 +8,11 @@ using System.Windows.Input;
 namespace WpfRecon
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Recon.xaml
     /// </summary>
-    public partial class MainWindow 
+    public partial class Recon
     {
-        public MainWindow()
+        public Recon()
         {
             //this loads the mainpage and the whole appliation from there
             InitializeComponent();

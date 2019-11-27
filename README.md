@@ -17,11 +17,9 @@ Insperation has been taken from Nmap and SPARTA projects.
 
 # Progress
 
-* UI 98%
-* **Functionality 0.1%**
-* Elegent Code - MVVM Design 40% 
-* Testing 10%
-
+* UI 99%
+* **Functionality 90%**
+* Testing 90%
 
 # Misc 
 

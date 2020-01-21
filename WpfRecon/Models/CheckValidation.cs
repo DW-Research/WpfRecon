@@ -31,7 +31,7 @@ namespace WpfRecon.Models
                 }
                 else
                 {
-                    isValid = "True";// check.IsMatch(Address, 0);
+                    isValid = "True";;
                     return isValid;
                 }
                  

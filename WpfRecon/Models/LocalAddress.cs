@@ -6,6 +6,7 @@ namespace WpfRecon.Models
     {
         public static string GetLocalAddress()
         {
+            //use local DNS to get the hostname and return local IP Address
             string strHostName = System.Net.Dns.GetHostName();
             IPHostEntry ipEntry = System.Net.Dns.GetHostEntry(strHostName);
             IPAddress[] addr = ipEntry.AddressList;

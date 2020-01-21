@@ -33,6 +33,7 @@ namespace WpfRecon.Models
                     
                     if (MainPage.AllPortCheck == true)
                     {
+                        sb.Append("-Pn ");
                         sb.Append("-p- ");
                       
                     }
@@ -40,6 +41,7 @@ namespace WpfRecon.Models
                     {
                         //full enumeration scan 
                         sb.Append("-A ");
+                        sb.Append("-Pn ");
                         //smb enumeration as this port has a poor security track record.
                         //Brute force SSH, Telnet, FTP
                         sb.Append("--script ssh-brute,telnet-brute,ftp-brute,smb-os-discovery, ");
@@ -50,6 +52,7 @@ namespace WpfRecon.Models
                     //if the Whole Network check box was ticked the scanner will scan a whole class C network.
                     if (MainPage.WholeNetworkCheck == true)
                     {
+                        sb.Append("-Pn ");
                         sb.Append(IpAddress + "/24 ");
 
                     }

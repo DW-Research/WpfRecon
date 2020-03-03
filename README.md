@@ -17,9 +17,9 @@ Insperation has been taken from Nmap and SPARTA projects.
 
 # Progress
 
-* UI 99%
-* **Functionality 90%**
-* Testing 90%
+* UI 100%
+* **Functionality 100%**
+* Testing 100%
 
 
 # Misc 

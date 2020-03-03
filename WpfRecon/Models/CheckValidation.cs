@@ -2,6 +2,7 @@
 
 namespace WpfRecon.Models
 {
+    
     public class CheckValidation
     {
 

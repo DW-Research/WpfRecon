@@ -5,7 +5,10 @@ VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfRecon", "WpfRecon\WpfRecon.csproj", "{FCD01813-0406-43B6-9EEB-622795AC5E7F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUnitTesting", "NUnitTesting\NUnitTesting.csproj", "{C108C555-84C7-431A-BC5D-0B8C0C92C3AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfReconTests", "WpfReconTests\WpfReconTests.csproj", "{04C0AF94-F057-4160-B507-91B29D2B9846}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FCD01813-0406-43B6-9EEB-622795AC5E7F} = {FCD01813-0406-43B6-9EEB-622795AC5E7F}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +20,10 @@ Global
 		{FCD01813-0406-43B6-9EEB-622795AC5E7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCD01813-0406-43B6-9EEB-622795AC5E7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCD01813-0406-43B6-9EEB-622795AC5E7F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C108C555-84C7-431A-BC5D-0B8C0C92C3AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C108C555-84C7-431A-BC5D-0B8C0C92C3AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C108C555-84C7-431A-BC5D-0B8C0C92C3AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C108C555-84C7-431A-BC5D-0B8C0C92C3AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04C0AF94-F057-4160-B507-91B29D2B9846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04C0AF94-F057-4160-B507-91B29D2B9846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04C0AF94-F057-4160-B507-91B29D2B9846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04C0AF94-F057-4160-B507-91B29D2B9846}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

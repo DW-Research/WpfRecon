@@ -57,7 +57,7 @@ namespace WpfRecon.Models
 
                     }
 
-                    //TODO: This seems to be allways true when the box is NOT selected.  This needs to be fixed as a priority. Look at if Else logic
+                    //local network scan takes local ip from dns and scans class subnet
                     if (MainPage.LocalNetworkCheck == true)
                     {
                         sb.Append(IpAddress + "/24");
@@ -78,7 +78,7 @@ namespace WpfRecon.Models
                     
                     await Task.Run(() => myProcess.Start());
                     
-                    
+                    //outputs the result as a string to the results page. 
                     var stdOutSb = new StringBuilder();
                     while (!myProcess.HasExited)
                     {

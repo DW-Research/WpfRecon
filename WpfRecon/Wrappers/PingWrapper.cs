@@ -31,7 +31,7 @@ namespace WpfRecon.Wrappers
         public static string GetLocalIPaddress()
         {
            
-            string LocalAdd = LocalAddress.GetLocalAddress();
+            string LocalAdd = LocalAddress.GetLocalIPAddress();
             return LocalAdd;
         }
     }

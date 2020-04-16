@@ -1,16 +1,22 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
+using System.Net.Sockets;
 
 namespace WpfRecon.Models
 {
     class LocalAddress
     {
-        public static string GetLocalAddress()
+        public static string GetLocalIPAddress()
         {
-            //use local DNS to get the hostname and return local IPv4 Address
-            string strHostName = System.Net.Dns.GetHostName();
-            IPHostEntry ipEntry = System.Net.Dns.GetHostEntry(strHostName);
-            IPAddress[] addr = ipEntry.AddressList;
-            return addr[addr.Length - 1].ToString(); ;
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    return ip.ToString();
+                }
+            }
+            throw new Exception("No network adapters with an IPv4 address in the system!");
         }
     }
 }

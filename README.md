@@ -3,7 +3,7 @@
 [![Downloads](https://img.shields.io/github/downloads/W4kEY/WpfRecon/total.svg)](https://github.com/W4KEY/WpfRecon/releases)
 
 
-(/Logo2.png)
+![](/Logo2.png)
 
 # Recon
 

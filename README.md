@@ -33,7 +33,7 @@ Insperation has been taken from Nmap and SPARTA projects.
 Nmap is used as part of the portscanning process the original author is Gordon Lyon (Fyodor)
 Logo taken from FireEye https://www.fireeye.com/blog/threat-research/2019/03/commando-vm-windows-offensive-distribution.html
 
-Recommended requirements
-*2GB of RAM
-*.NET Framework 4.8
-*Microsoft Visual C++ 2013 
+Recommended requirements:
+2GB of RAM,
+*.NET Framework 4.8,
+*Microsoft Visual C++ 2013. 

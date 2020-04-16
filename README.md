@@ -35,5 +35,5 @@ Logo taken from FireEye https://www.fireeye.com/blog/threat-research/2019/03/com
 
 Recommended requirements:
 2GB of RAM,
-*.NET Framework 4.8,
-*Microsoft Visual C++ 2013. 
+.NET Framework 4.8,
+Microsoft Visual C++ 2013. 

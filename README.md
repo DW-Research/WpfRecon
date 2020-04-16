@@ -1,6 +1,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Release](https://img.shields.io/github/release/Ne0nd0g/merlin.svg)](https://github.com/Ne0nd0g/merlin/releases/latest)
+[![Release](https://img.shields.io/github/release/W4KEY/WpfRecon.svg)](https://github.com/W4KEY/WpfRecon/releases/latest)
 ![](/Logo2.png)
+[![Downloads](https://img.shields.io/github/downloads/W4kEY/WpfRecon/total.svg)](https://github.com/W4KEY/WpfRecon/releases)
 # Recon
 
 This project is for my University MSc in Applied computer science.

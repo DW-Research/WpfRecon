@@ -1,0 +1,14 @@
+﻿<Window x:Class="WpfRecon.Recon"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Recon" Height="800" Width="1100" MaxHeight="800" MaxWidth="1100" MinWidth="1100" MinHeight="800">
+    <DockPanel>
+        <Frame x:Name="NavFrame" NavigationUIVisibility="Hidden" Width="1100"/>
+    </DockPanel>
+    
+</Window>
+    
+  
